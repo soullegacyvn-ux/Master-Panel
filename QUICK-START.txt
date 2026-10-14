@@ -1,0 +1,61 @@
+MASTER PANEL 1.1.0 — WINDOWS x64 / GPD WIN 5
+
+OPEN THE PANEL
+Run Master-Panel-v1.1.0.exe and allow Administrator access.
+Press the physical Keyboard/Mouse <-> Gamepad SWAP BUTTON on the Win 5
+to show Master Panel. Press it again to hide the panel.
+The button still switches the controller mode. The app must be running.
+You can also press Ctrl + Alt + Space or use Show from the tray icon.
+
+START WITH WINDOWS
+Keep the EXE in a fixed folder, such as C:\MasterPanel.
+Settings -> Open with Windows starts it in the tray at Windows sign-in.
+Check that the startup schedule points to the new EXE after an update.
+Saved fan/TDP settings are restored as the hardware becomes ready.
+
+UPDATE AN EXISTING COPY
+Exit the old copy from its tray menu. Extract/run the new EXE.
+Check Settings -> Device information -> Version: 1.1.0.
+Your locally saved settings are retained.
+
+LOSSLESS SCALING WHILE PLAYING
+You can enable 2x after the game is already running.
+1. Install your purchased Windows copy of Lossless Scaling from Steam.
+   Open it once to initialize settings and create/link any game profiles.
+2. Use a matching game profile with Auto Scale on, or configure a working
+   scaling shortcut in the LS app once. Hotkey=None is not a shortcut.
+3. Set the game to Borderless or Windowed, then press Swap over that game.
+4. Select its matching LS profile in Tune, then on Master press Apply 2x
+   or Apply 3x. LS reloads minimized and Master Panel returns to the game.
+   Your game remains open; scaling pauses briefly during the reload.
+5. Enable Draw FPS in Tune to check the LS output counter.
+   RTSS Game FPS measures the game before the generated frames.
+
+Changing the multiplier no longer requires manually closing LS first for
+supported Tune profiles. If LS is configured to close to its tray, it may
+remain running: exit it from the tray, then apply again. Open app remains
+available for initial setup and LS preferences outside profile Tune.
+Leave GPU headroom. 2x creates intermediate frames; it does not double the
+game's simulation or guarantee exactly twice its previous FPS.
+
+REQUIREMENTS
+Microsoft WebView2 Runtime. Separately installed PawnIO for sensors,
+fan and TDP. RTSS, Lossless Scaling and FxSound are optional and separate.
+No Lossless Scaling binaries or rendering engine are included.
+
+CONTROLLER MAPPING
+Choose an input, choose its output, then Done to stage a draft.
+Press Flash mappings to apply. Temporary lasts until restore/exit/reboot.
+Permanent requires supported firmware and an explicit confirmation.
+The panel shows the reason if Flash is unavailable.
+
+FEEDBACK
+Settings -> Report a problem creates a local diagnostic ZIP.
+Powered by Vincent — mythvietnamese@gmail.com
+
+HUONG DAN NHANH
+Chay EXE va chap nhan Administrator. Bam nut Swap Keyboard/Mouse <->
+Gamepad tren Win 5 de mo panel; bam lai de an. App phai dang chay.
+Bat Open with Windows de app chay o khay he thong sau khi dang nhap.
+LS: game Borderless/Windowed -> bam Swap -> chon profile dung -> Apply 2x.
+Khong can tat game. Can LS Windows da mua; setup Auto Scale/shortcut mot lan.
