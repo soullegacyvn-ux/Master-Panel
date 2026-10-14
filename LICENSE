@@ -1,0 +1,15 @@
+Master Panel distribution notice
+
+Copyright 2026 Vincent. The Master Panel application source and build workspace
+are private. This repository contains distribution documentation; it does not
+contain the application source or grant a GPL license to the current Windows
+executable.
+
+Third-party components retain their own copyright and license terms. The
+Windows EXE includes those notices and the corresponding source of redistributed
+PawnIO.Modules components, available from Settings > Third-party licenses.
+Their license rights, including modification and debugging of modified
+components, are not restricted by this notice.
+
+Earlier releases and their source retain the licenses under which they were
+distributed. This notice does not revoke those permissions.
