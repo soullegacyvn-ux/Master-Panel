@@ -1,63 +1,62 @@
-MASTER PANEL 1.2.0 — BASED ON 1.1.1
+MASTER PANEL 2.0.0 — WINDOWS X64 / GPD WIN 5
 
-INSTALL AND OPEN
-Exit the previous Master Panel from its tray menu. Extract this ZIP to a
-fixed folder and run Master-Panel-v1.2.0.exe as Administrator.
-Press the Win 5 Keyboard/Mouse <-> Gamepad Swap button to show/hide the
-panel. Controller navigation should become available without touching
-or clicking the panel. Release any held buttons/sticks, then use the pad.
-Ctrl + Alt + Space and the tray menu remain alternate ways to open it.
+OPEN AND UPDATE
+Exit the previous copy from the tray. Keep Master-Panel-v2.0.0.exe in a fixed
+folder and run as Administrator. Press the physical Keyboard/Mouse <-> Gamepad
+Swap button to open/hide the panel. Controller navigation starts without a tap;
+release held sticks/buttons first. Ctrl+Alt+Space and the tray menu also open it.
+WebView2 is required for the UI; PawnIO for supported hardware access.
+Open with Windows starts the app at sign-in and restores saved controls.
 
-Settings now has only the Open with Windows checkbox for startup.
-Saved fan mode restoration and the device keyboard button are built-in.
-Enabled startup schedules automatically repair their EXE path after moves.
-Local controller profiles remain; OpenWinControls sharing and all Lossless
-Scaling controls/background integration have been removed from this build.
-Your separate LS installation and previous settings files are not deleted.
+DISPLAY
+Brightness and Night light share the same layout. Values are at the top: percent
+and Kelvin. Brightness +/- steps by 5 points; Night light +/- by 100 K. Lower
+Kelvin is warmer; higher Kelvin is cooler. Use Turn on/off beside the Night light
+buttons. The Schedule row below offers Off, Set hours or Sunset to sunrise.
+Set the times if needed, then Save. Temperature and schedule are independent;
+Windows runs the schedule. Sunset mode needs Windows location enabled.
 
-BRIGHTNESS
-Both sliders retain your newest choice until Windows reports completion.
-Manual app launches keep current Windows brightness; saved startup restore
-runs only for Open with Windows. Failures show beneath the sliders.
+Choose Natural, Vivid, Soft or OLED to apply its saved values to the AMD driver.
+Natural is selected initially. The chosen profile is remembered after successful
+application, then reapplied whenever Master Panel starts. Enable Open with Windows
+for automatic application after a reboot/sign-in. Keep the app's folder accessible.
+Contrast/Black level are the left column; Saturation/Hue the right. When editing,
+Save within 5 seconds to overwrite this profile, or Cancel/let the timer restore
+previous colors. Controller X saves and B cancels during the preview.
+OLED is a color preset for the existing LCD. Extra saved profiles remain available.
 
-CONTROLLER MAPPING
-Select a button/output, then Done to stage the change.
-Temporary -> Apply temporary mappings changes RAM for the current session.
-Permanent -> Flash mappings writes controller storage after confirmation,
-backup, firmware validation and RAM readback. A matching RAM mapping must
-still be committed if Permanent is requested.
-The status shows the current transaction stage. A missing reply times out.
-Slow synchronous HID calls request Windows cancellation; if a driver ignores
-it, the transaction stays busy and its outcome remains unconfirmed. Never
-classify a blocked/unknown operation as a successful flash. Keep backups.
-If a commit journal is present, automatic restoration remains paused.
-Successful flash acknowledgement/readback still requires reboot testing.
+CUSTOMIZE AND TDP
+Master -> Customize: Soft 3D, Flat dark gray or Gradient gray; seven accents;
+19 vector widgets as Cards; width 360-660 DIP (500 default). Existing saved widths,
+widget order and visibility remain. Glass and view/spacing pickers are removed.
+Drag the TDP knob within supported limits. Gray 0-to-minimum cannot be selected;
+8 W min is typical. The red CPU draw bar shows measured power, including readings
+below the minimum, and does not alter the selected cap. Tier labels do not change
+fan or Boost policy. Saved fan restore is built in. Power is below the tab rail.
 
-AUDIO
-FxSound exit status 1 no longer prevents waiting for a new valid status reply.
-A fresh supported status file and matching fields still verify every action.
-Repeated Refresh clicks are coalesced. FxSound remains a separate install
-that must support its --status and EQ command options.
+AUDIO AND OVERLAY
+Volume +/- steps by five. Bass/Treble use simple controls; controller up/down
+reaches both, A enters editing, left/right adjusts, B exits. Select an EQ frequency
+or point and adjust its gain; select it again or B to close. The graph shows band
+gains, not a spectrum, and scales with panel width. FxSound must be connected/on.
+RTSS displays FPS (the game's counter), with optional GPU load and Handheld layout.
+RTSS and a compatible FxSound are separate optional installations.
+Lossless Scaling integration remains removed; separate installed apps are retained.
 
-RTSS
-In-game overlay -> Handheld offers six metrics in three columns, smaller
-labels and larger values. Existing presets/position/enable preference remain.
-RTSS continues reporting the game's own FPS; no frame-generation estimate
-is fabricated. Handheld uses the existing RTSS text/font interface.
+CONTROLLER
+Choose a source/output, then Done to stage it. Temporary applies RAM for this
+session; Permanent commits storage after review, backups, firmware checks and
+readback. Uncertain or blocked flash is not a success. Keep backups; interrupted
+commit journals pause automatic restoration. Physical persistence needs reboot tests.
+Front/Rear are matching transparent vectors; shoulders sit below the front drawing.
 
-TDP AND BATTERY
-Performance displays battery percentage, net charging power, current derived
-from battery voltage, and estimated time to full or remaining battery time.
-Charge time uses the current rate; charging taper may extend it. Unknown
-voltage/rate/capacity or relative units hide unsupported physical values.
-No extra battery polling, external process or power-management mode is added.
-
-VALIDATION LIMITS
-Portable regression tests, UI handler mocks, race checks and Windows vet
-passed. All Windows test packages compile and the x64 GUI EXE/icon/admin
-manifest are inspected. Windows binaries, controller/brightness/focus,
-FxSound/RTSS rendering and GPD hardware have not been run on this Mac.
-Windows and device-specific behavior still needs testing on the Win 5.
-PawnIO, WebView2 and separately installed RTSS/FxSound are used as before.
+VALIDATION
+Portable software tests, color-profile failure/restart/race checks, JS handler
+mocks, HTML structure, Windows vet and all 70 Windows test-package compilations
+passed. EXE/version/icon/admin resources and ZIP integrity are checked. The full
+source ZIP rebuilds the EXE byte-identically offline with Go 1.24.7.
+Windows/WebView2 layout, ADL startup restore, scheduled transitions, HID/flash,
+brightness, RTSS/FxSound and Win 5 hardware were not run on the build Mac.
+Battery data is read-only; no BIOS or charge-limit writer. Time to full means 100%.
 
 Powered by Vincent — mythvietnamese@gmail.com
