@@ -1,61 +1,63 @@
-MASTER PANEL 1.1.0 — WINDOWS x64 / GPD WIN 5
+MASTER PANEL 1.2.0 — BASED ON 1.1.1
 
-OPEN THE PANEL
-Run Master-Panel-v1.1.0.exe and allow Administrator access.
-Press the physical Keyboard/Mouse <-> Gamepad SWAP BUTTON on the Win 5
-to show Master Panel. Press it again to hide the panel.
-The button still switches the controller mode. The app must be running.
-You can also press Ctrl + Alt + Space or use Show from the tray icon.
+INSTALL AND OPEN
+Exit the previous Master Panel from its tray menu. Extract this ZIP to a
+fixed folder and run Master-Panel-v1.2.0.exe as Administrator.
+Press the Win 5 Keyboard/Mouse <-> Gamepad Swap button to show/hide the
+panel. Controller navigation should become available without touching
+or clicking the panel. Release any held buttons/sticks, then use the pad.
+Ctrl + Alt + Space and the tray menu remain alternate ways to open it.
 
-START WITH WINDOWS
-Keep the EXE in a fixed folder, such as C:\MasterPanel.
-Settings -> Open with Windows starts it in the tray at Windows sign-in.
-Check that the startup schedule points to the new EXE after an update.
-Saved fan/TDP settings are restored as the hardware becomes ready.
+Settings now has only the Open with Windows checkbox for startup.
+Saved fan mode restoration and the device keyboard button are built-in.
+Enabled startup schedules automatically repair their EXE path after moves.
+Local controller profiles remain; OpenWinControls sharing and all Lossless
+Scaling controls/background integration have been removed from this build.
+Your separate LS installation and previous settings files are not deleted.
 
-UPDATE AN EXISTING COPY
-Exit the old copy from its tray menu. Extract/run the new EXE.
-Check Settings -> Device information -> Version: 1.1.0.
-Your locally saved settings are retained.
-
-LOSSLESS SCALING WHILE PLAYING
-You can enable 2x after the game is already running.
-1. Install your purchased Windows copy of Lossless Scaling from Steam.
-   Open it once to initialize settings and create/link any game profiles.
-2. Use a matching game profile with Auto Scale on, or configure a working
-   scaling shortcut in the LS app once. Hotkey=None is not a shortcut.
-3. Set the game to Borderless or Windowed, then press Swap over that game.
-4. Select its matching LS profile in Tune, then on Master press Apply 2x
-   or Apply 3x. LS reloads minimized and Master Panel returns to the game.
-   Your game remains open; scaling pauses briefly during the reload.
-5. Enable Draw FPS in Tune to check the LS output counter.
-   RTSS Game FPS measures the game before the generated frames.
-
-Changing the multiplier no longer requires manually closing LS first for
-supported Tune profiles. If LS is configured to close to its tray, it may
-remain running: exit it from the tray, then apply again. Open app remains
-available for initial setup and LS preferences outside profile Tune.
-Leave GPU headroom. 2x creates intermediate frames; it does not double the
-game's simulation or guarantee exactly twice its previous FPS.
-
-REQUIREMENTS
-Microsoft WebView2 Runtime. Separately installed PawnIO for sensors,
-fan and TDP. RTSS, Lossless Scaling and FxSound are optional and separate.
-No Lossless Scaling binaries or rendering engine are included.
+BRIGHTNESS
+Both sliders retain your newest choice until Windows reports completion.
+Manual app launches keep current Windows brightness; saved startup restore
+runs only for Open with Windows. Failures show beneath the sliders.
 
 CONTROLLER MAPPING
-Choose an input, choose its output, then Done to stage a draft.
-Press Flash mappings to apply. Temporary lasts until restore/exit/reboot.
-Permanent requires supported firmware and an explicit confirmation.
-The panel shows the reason if Flash is unavailable.
+Select a button/output, then Done to stage the change.
+Temporary -> Apply temporary mappings changes RAM for the current session.
+Permanent -> Flash mappings writes controller storage after confirmation,
+backup, firmware validation and RAM readback. A matching RAM mapping must
+still be committed if Permanent is requested.
+The status shows the current transaction stage. A missing reply times out.
+Slow synchronous HID calls request Windows cancellation; if a driver ignores
+it, the transaction stays busy and its outcome remains unconfirmed. Never
+classify a blocked/unknown operation as a successful flash. Keep backups.
+If a commit journal is present, automatic restoration remains paused.
+Successful flash acknowledgement/readback still requires reboot testing.
 
-FEEDBACK
-Settings -> Report a problem creates a local diagnostic ZIP.
+AUDIO
+FxSound exit status 1 no longer prevents waiting for a new valid status reply.
+A fresh supported status file and matching fields still verify every action.
+Repeated Refresh clicks are coalesced. FxSound remains a separate install
+that must support its --status and EQ command options.
+
+RTSS
+In-game overlay -> Handheld offers six metrics in three columns, smaller
+labels and larger values. Existing presets/position/enable preference remain.
+RTSS continues reporting the game's own FPS; no frame-generation estimate
+is fabricated. Handheld uses the existing RTSS text/font interface.
+
+TDP AND BATTERY
+Performance displays battery percentage, net charging power, current derived
+from battery voltage, and estimated time to full or remaining battery time.
+Charge time uses the current rate; charging taper may extend it. Unknown
+voltage/rate/capacity or relative units hide unsupported physical values.
+No extra battery polling, external process or power-management mode is added.
+
+VALIDATION LIMITS
+Portable regression tests, UI handler mocks, race checks and Windows vet
+passed. All Windows test packages compile and the x64 GUI EXE/icon/admin
+manifest are inspected. Windows binaries, controller/brightness/focus,
+FxSound/RTSS rendering and GPD hardware have not been run on this Mac.
+Windows and device-specific behavior still needs testing on the Win 5.
+PawnIO, WebView2 and separately installed RTSS/FxSound are used as before.
+
 Powered by Vincent — mythvietnamese@gmail.com
-
-HUONG DAN NHANH
-Chay EXE va chap nhan Administrator. Bam nut Swap Keyboard/Mouse <->
-Gamepad tren Win 5 de mo panel; bam lai de an. App phai dang chay.
-Bat Open with Windows de app chay o khay he thong sau khi dang nhap.
-LS: game Borderless/Windowed -> bam Swap -> chon profile dung -> Apply 2x.
-Khong can tat game. Can LS Windows da mua; setup Auto Scale/shortcut mot lan.
