@@ -1,0 +1,51 @@
+MASTER PANEL 3.0.2 — VALIDATION SCOPE
+
+Passed on the build Mac:
+- Portable Go tests, including race checks across the portable packages.
+- Gyro math/calibration/trigger/focus lifecycle with mocked sensor and mouse output.
+- Widget RPC document correlation, per-view picker/activity, JSON-order-independent
+  fan curve matching, visibility structure, native action drain and updater guards.
+- Shipped panel JS handler/controller-picker regressions using mock native APIs.
+- Windows cross-compilation, vet, GUI PE/version/admin-manifest/eight-icon inspection.
+- View handoff cancels pending UI commands, rejects inactive widget writes,
+  refreshes shared state on resume and reduces hidden high-rate input polling.
+- Dock TDP 85 W range, source-change clamp/restore and 65 W orange caution boundary.
+- MP vector source and regenerated desktop/widget assets checked.
+- Shared 60-sample battery power chart: automatic scale, invalid gaps and AC transitions.
+- Fan references preserve unknown Auto duty and use measured RPM and temperature.
+- Hosted ActivatedNotForeground focus and trusted-input heartbeat ordering.
+- Mapping editor stays inside the widget page.
+
+The Windows CI build additionally runs the Go tests, .NET shared controller-session
+checks, JS regressions, native UWP build/signing, Program Files GUI installation, shortcuts, uninstall
+registration, the installed app bridge and clean uninstall checks.
+Its validation log records their result. A successfully built/registered package is
+not a test of real Xbox Game Bar controller routing or physical GPD hardware.
+
+Not tested on the build Mac or generic Windows runner:
+GPD Win 5 sensor axes/gyro latency/aiming, firmware flash/reboot persistence,
+real controller navigation and selected icon appearance inside Game Bar,
+real fan/brightness/display/Night light/audio/RTSS behavior, sleep/resume,
+or CPU/battery cost. The owner should verify these on the Win 5.
+
+Gyro starts off and only injects mouse input after explicit enabling. Preview alone
+is read-only. No BIOS or battery charge-limit writes are added.
+
+3.0.2 added checks:
+- Single controller input source and trigger press/release hysteresis (.NET).
+- All eight menus and Settings keep directional focus local; Menu opens header.
+- LT/RT one action per release, bounded tab ends, modal and slider edit behavior.
+- Vibration byte allowlist, mappings preserved, backup, RAM readback, flash and restore.
+- Vibration UI review/cancel and fresh post-ACK readback; invalid levels rejected.
+- Optional downloads: strict IDs/origins/redirects, size/hash limits, exact ZIP entry,
+  cancellation and duplicate protection; release CI retrieves publisher bytes.
+- Diagnostics only read sensor driver metadata. No claim of repaired gyro driver.
+
+Full-package updater checks:
+- Exact Setup asset preference and same-version package completion metadata.
+- Native EXE remains valid for the 3.0.1 updater; packages never replace the app EXE.
+- Package repair accepts same version only for a validated installer plan.
+- Windows CI installs published 3.0.1, models its first native swap, then runs the
+  real new protected package helper: wait for normal parent shutdown, Setup,
+  native identity, registered UWP version and saved-data retention.
+- The old 3.0.1 Update button/network leg and real Win 5 behavior remain device checks.
