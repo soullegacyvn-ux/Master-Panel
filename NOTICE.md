@@ -79,3 +79,16 @@ The new metric/navigation icons are independently authored native SVG symbols.
 shared Front silhouette; black M/rounded gray tile with Volt-highlight app/tray
 resource; panel vector mask retained. New original Go GPU aggregation and PDH
 code uses Windows APIs; no additional DLL/runtime is bundled.
+
+## Xbox Game Bar widget (experimental, private build)
+
+The widget in `xbox-widget/` follows the project layout, activation code and manifest proxy-stub registration of Microsoft's [XboxGameBarSamples](https://github.com/microsoft/XboxGameBarSamples) WidgetSampleCS (MIT License, Copyright (c) Microsoft Corporation). At build time it references the Microsoft.Gaming.XboxGameBar, Microsoft.NETCore.UniversalWindowsPlatform and Microsoft.UI.Xaml (WinUI 2, which brings Microsoft.Web.WebView2) NuGet packages under Microsoft's licenses; none of them is included in this source. The built widget package depends on the Microsoft.UI.Xaml 2.8 and VCLibs framework packages, installed from the build output. The full widget shows Master Panel's own page in the Microsoft Edge WebView2 Runtime that ships with Windows 11. Package-family-name derivation in `internal/widgetbridge/pfn.go` is checked against Microsoft's published family names. The widget images are rendered from the existing Master Panel mark by `xbox-widget/tools/make_assets.py`.
+
+## 3.0.0 icons and gyro
+
+The Power save battery/leaf SVG is the user-supplied Microsoft Fluent System Icons
+`ic_fluent_battery_saver_24_filled` contour, recolored with currentColor. MIT,
+Copyright (c) 2020 Microsoft Corporation; see LICENSE-Fluent-System-Icons.txt.
+MP branding, the redrawn turbo bolt, headphone/gyro symbols and UI presentation
+follow the user's supplied references. The Windows gyrometer integration is
+original code using Windows API/ABI declarations; no sensor driver is distributed.

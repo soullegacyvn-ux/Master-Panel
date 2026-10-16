@@ -1,12 +1,26 @@
-MASTER PANEL 2.0.0 — WINDOWS X64 / GPD WIN 5
+MASTER PANEL 3.0.0 — WINDOWS X64 / GPD WIN 5
 
-OPEN AND UPDATE
-Exit the previous copy from the tray. Keep Master-Panel-v2.0.0.exe in a fixed
-folder and run as Administrator. Press the physical Keyboard/Mouse <-> Gamepad
-Swap button to open/hide the panel. Controller navigation starts without a tap;
-release held sticks/buttons first. Ctrl+Alt+Space and the tray menu also open it.
+INSTALL AND OPEN
+Exit the previous tray copy. Extract the Windows ZIP to a fixed folder and run
+Install.cmd to install the Game Bar widget and launch Master Panel. The widget
+installer imports its included self-signed certificate to Trusted People and adds
+a loopback exemption so it can reach the desktop app. It needs administrator access.
+For desktop-only use, run Master-Panel-v3.0.0.exe instead.
+
+Press the physical Keyboard/Mouse <-> Gamepad Swap button to open/hide the desktop
+panel. Open with Windows starts at sign-in. Win+G -> Widgets -> Master Panel opens
+the installed widget. Release held controls first. LT/RT change widget tabs;
+Game Bar reserves LB/RB. The desktop app must remain running.
 WebView2 is required for the UI; PawnIO for supported hardware access.
-Open with Windows starts the app at sign-in and restores saved controls.
+
+GYRO
+Open the dedicated Gyro tab to check the Windows sensor. Gyro aiming starts OFF.
+Keep the Win 5 still and select Calibrate. Enable mouse aim, choose LT/RT or Always,
+and save. Release then hold the selected trigger while the game is focused.
+Adjust axes/inversion if physical movement is reversed. Panel/widget interaction
+pauses aiming; preview alone never moves the mouse. Games must support mixed mouse
+and controller input. Windows must expose a working gyro driver. Physical sensor
+orientation and aim behavior have not been tested on the build Mac.
 
 DISPLAY
 Brightness and Night light share the same layout. Values are at the top: percent
@@ -30,7 +44,9 @@ Master -> Customize: Soft 3D, Flat dark gray or Gradient gray; seven accents;
 19 vector widgets as Cards; width 360-660 DIP (500 default). Existing saved widths,
 widget order and visibility remain. Glass and view/spacing pickers are removed.
 Drag the TDP knob within supported limits. Gray 0-to-minimum cannot be selected;
-8 W min is typical. The red CPU draw bar shows measured power, including readings
+8 W min is typical. Win5 395 DC slider reaches 85 W (385: 75 W);
+battery stays at 55 W, USB-C at 40 W. The selected number is the requested limit;
+SMU readback must confirm it. Firmware/adapter capability can further restrict it. The red CPU draw bar shows measured power, including readings
 below the minimum, and does not alter the selected cap. Tier labels do not change
 fan or Boost policy. Saved fan restore is built in. Power is below the tab rail.
 
@@ -51,12 +67,7 @@ commit journals pause automatic restoration. Physical persistence needs reboot t
 Front/Rear are matching transparent vectors; shoulders sit below the front drawing.
 
 VALIDATION
-Portable software tests, color-profile failure/restart/race checks, JS handler
-mocks, HTML structure, Windows vet and all 70 Windows test-package compilations
-passed. EXE/version/icon/admin resources and ZIP integrity are checked. The full
-source ZIP rebuilds the EXE byte-identically offline with Go 1.24.7.
-Windows/WebView2 layout, ADL startup restore, scheduled transitions, HID/flash,
-brightness, RTSS/FxSound and Win 5 hardware were not run on the build Mac.
-Battery data is read-only; no BIOS or charge-limit writer. Time to full means 100%.
+Read VALIDATION-3.0.0.txt for completed checks and limits. Software tests and Windows
+build checks do not replace Win 5 hardware testing. No BIOS or charge-limit writer.
 
 Powered by Vincent — mythvietnamese@gmail.com
