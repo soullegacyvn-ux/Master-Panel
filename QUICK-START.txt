@@ -1,73 +1,40 @@
-MASTER PANEL 3.0.0 — WINDOWS X64 / GPD WIN 5
+MASTER PANEL 3.0.1
 
-INSTALL AND OPEN
-Exit the previous tray copy. Extract the Windows ZIP to a fixed folder and run
-Install.cmd to install the Game Bar widget and launch Master Panel. The widget
-installer imports its included self-signed certificate to Trusted People and adds
-a loopback exemption so it can reach the desktop app. It needs administrator access.
-For desktop-only use, run Master-Panel-v3.0.0.exe instead.
+1. Exit the old app from its tray menu.
+2. Open Master-Panel-v3.0.1-Setup.exe and approve Windows' Administrator prompt.
+3. Click Install. The default folder is C:\Program Files\Master Panel.
+4. Open Master Panel from Start or the desktop shortcut.
 
-Press the physical Keyboard/Mouse <-> Gamepad Swap button to open/hide the desktop
-panel. Open with Windows starts at sign-in. Win+G -> Widgets -> Master Panel opens
-the installed widget. Release held controls first. LT/RT change widget tabs;
-Game Bar reserves LB/RB. The desktop app must remain running.
-WebView2 is required for the UI; PawnIO for supported hardware access.
+Setup installs the desktop app and Xbox Game Bar widget together. It does not
+require opening a command window. The widget uses its included self-signed
+certificate and a local loopback connection. Saved user settings are retained.
 
-GYRO
-Open the dedicated Gyro tab to check the Windows sensor. Gyro aiming starts OFF.
-Keep the Win 5 still and select Calibrate. Enable mouse aim, choose LT/RT or Always,
-and save. Release then hold the selected trigger while the game is focused.
-Adjust axes/inversion if physical movement is reversed. Panel/widget interaction
-pauses aiming; preview alone never moves the mouse. Games must support mixed mouse
-and controller input. Windows must expose a working gyro driver. Physical sensor
-orientation and aim behavior have not been tested on the build Mac.
+DESKTOP: press the physical Keyboard/Mouse <-> Gamepad Swap button.
+WIDGET: Win+G > Widgets > Master Panel. LT/RT switch widget tabs.
+Release held inputs after opening or switching focus.
 
-DISPLAY
-Brightness and Night light share the same layout. Values are at the top: percent
-and Kelvin. Brightness +/- steps by 5 points; Night light +/- by 100 K. Lower
-Kelvin is warmer; higher Kelvin is cooler. Use Turn on/off beside the Night light
-buttons. The Schedule row below offers Off, Set hours or Sunset to sunrise.
-Set the times if needed, then Save. Temperature and schedule are independent;
-Windows runs the schedule. Sunset mode needs Windows location enabled.
+Controller mapping in the widget uses an editor inside the widget content.
+Choose a source, choose its output, press Done, then Apply/Flash. Done only
+stages the mapping. Permanent flash still needs review and backup/readback.
 
-Choose Natural, Vivid, Soft or OLED to apply its saved values to the AMD driver.
-Natural is selected initially. The chosen profile is remembered after successful
-application, then reapplied whenever Master Panel starts. Enable Open with Windows
-for automatic application after a reboot/sign-in. Keep the app's folder accessible.
-Contrast/Black level are the left column; Saturation/Hue the right. When editing,
-Save within 5 seconds to overwrite this profile, or Cancel/let the timer restore
-previous colors. Controller X saves and B cancels during the preview.
-OLED is a color preset for the existing LCD. Extra saved profiles remain available.
+Gyro reads the Windows motion sensor, independently of Xbox 360 controller mode.
+It starts off. Open Gyro, use Check sensor, calibrate while stationary, then
+explicitly enable aiming. Windows must expose a functioning gyro device; an
+app update cannot install or repair a missing GPD/I2C sensor driver.
 
-CUSTOMIZE AND TDP
-Master -> Customize: Soft 3D, Flat dark gray or Gradient gray; seven accents;
-19 vector widgets as Cards; width 360-660 DIP (500 default). Existing saved widths,
-widget order and visibility remain. Glass and view/spacing pickers are removed.
-Drag the TDP knob within supported limits. Gray 0-to-minimum cannot be selected;
-8 W min is typical. Win5 395 DC slider reaches 85 W (385: 75 W);
-battery stays at 55 W, USB-C at 40 W. The selected number is the requested limit;
-SMU readback must confirm it. Firmware/adapter capability can further restrict it. The red CPU draw bar shows measured power, including readings
-below the minimum, and does not alter the selected cap. Tier labels do not change
-fan or Boost policy. Saved fan restore is built in. Power is below the tab rail.
+The power chart shares the last 60 one-second battery samples between both
+views. Its size follows the panel and its W scale follows the readings. Missing
+samples are shown as gaps. It creates no extra sensor polling worker.
 
-AUDIO AND OVERLAY
-Volume +/- steps by five. Bass/Treble use simple controls; controller up/down
-reaches both, A enters editing, left/right adjusts, B exits. Select an EQ frequency
-or point and adjust its gain; select it again or B to close. The graph shows band
-gains, not a spectrum, and scales with panel width. FxSound must be connected/on.
-RTSS displays FPS (the game's counter), with optional GPU load and Handheld layout.
-RTSS and a compatible FxSound are separate optional installations.
-Lossless Scaling integration remains removed; separate installed apps are retained.
+Fan output shows the software manual range, measured RPM and thermal status.
+Auto duty is unavailable when the EC reports only automatic mode. The app does
+not invent an RPM minimum/maximum or guarantee a safe temperature from RPM.
 
-CONTROLLER
-Choose a source/output, then Done to stage it. Temporary applies RAM for this
-session; Permanent commits storage after review, backups, firmware checks and
-readback. Uncertain or blocked flash is not a success. Keep backups; interrupted
-commit journals pause automatic restoration. Physical persistence needs reboot tests.
-Front/Rear are matching transparent vectors; shoulders sit below the front drawing.
+WebView2 is required for the full UI, PawnIO for supported hardware controls,
+and Xbox Game Bar for the widget. Open with Windows restores saved controls at
+sign-in. No BIOS or battery charge-limit writes are added.
 
-VALIDATION
-Read VALIDATION-3.0.0.txt for completed checks and limits. Software tests and Windows
-build checks do not replace Win 5 hardware testing. No BIOS or charge-limit writer.
+Uninstall from Windows Settings > Apps > Installed apps > Master Panel.
+This removes the app, widget and its own certificate; user settings remain.
 
-Powered by Vincent — mythvietnamese@gmail.com
+Hardware, gyro axes, and real Game Bar controller focus need Win 5 testing.

@@ -1,36 +1,37 @@
-# Master Panel 3.0.0
+# Master Panel 3.0.1
 
-A compact Windows control panel built around everyday use of the GPD Win 5, now with an Xbox Game Bar widget.
+Windows controls for GPD Win 5, now with an Xbox Game Bar widget and a dedicated Gyro tab.
 
-[Download the Windows app + widget](https://github.com/soullegacyvn-ux/Master-Panel/releases/download/v3.0.0/Master-Panel-v3.0.0-Windows.zip) · [Release and individual downloads](https://github.com/soullegacyvn-ux/Master-Panel/releases/tag/v3.0.0) · [Quick start](QUICK-START.txt)
+[Download the Windows installer](https://github.com/soullegacyvn-ux/Master-Panel/releases/download/v3.0.1/Master-Panel-v3.0.1-Setup.exe) · [Quick start](QUICK-START.txt)
 
-Extract the full ZIP, exit the old app from the tray, and run **Install.cmd** to update both the desktop app and widget to 3.0.0. Press the physical **Keyboard/Mouse ↔ Gamepad Swap button** for the desktop panel. Press **Win+G → Widgets → Master Panel** for the widget. The widget uses **LT/RT** to switch tabs; the desktop panel uses **LB/RB**. Release held inputs after opening or changing focus.
+Run Master Panel and press the physical **Keyboard/Mouse ↔ Gamepad Swap button** to open/hide the panel. **Open with Windows** starts it at sign-in and restores saved controls. Win+G → Widgets → Master Panel opens the installed widget; the desktop app supplies its controls.
 
-## One app, two views
+## In this release
 
-The desktop panel and widget share one hardware engine, settings and telemetry. An inactive view discards unsubmitted edits, and the view you return to refreshes the shared state before accepting new changes. Hidden views stop frequent input and live-preview polling.
+- Game Bar accepts hosted window activation and refreshes its own focus heartbeat before changes. Display, Sound, Fan and mapping use the same full panel and validated controls. Controller input is read inside the widget, with held-input protection; LT/RT switch tabs because Game Bar owns LB/RB.
+- Mapping picker state is tracked per widget view. Fan presets compare curve values rather than JSON field order. Hidden views suspend, stale replies are discarded, and updates wait while a widget is in use.
+- Gyro has its own tab with live motion preview, calibration, activation trigger, axis selection, sensitivity, deadzone, smoothing and inversion. It starts off. It reads the Windows gyro driver and sends relative mouse input; games must accept mouse aiming alongside a controller. Native axis orientation still needs device testing.
+- Desktop and widget share one control engine and saved settings. Inactive views cancel queued edits and cannot send new hardware changes; opening them refreshes the shared state.
+- The Win5 395 DC slider reaches 85 W; the 65–85 W segment uses vivid orange and a radiation caution icon. Source and firmware limits remain enforced.
+- New slightly bolder MP vector branding across the app, tray and widget, plus refreshed headphone and gyro icons.
+- Existing TDP/fan, display profiles/Night light, mapping, audio/FxSound, RTSS and compact customizable dashboard remain available. Lossless Scaling integration remains removed.
 
-3.0.0 fixes widget fan preset highlighting and the mapping picker closing early, adds controller navigation inside the widget, and refreshes the MP logo and icons across both views. A dedicated **Gyro** tab offers a motion preview, calibration, trigger activation, sensitivity, smoothing, deadzone and axis settings. Gyro starts **off**; preview alone does not move the mouse.
+## Install
 
-## Controls
+Exit the old Master Panel copy from its tray menu, then run **Master-Panel-v3.0.1-Setup.exe**. Setup installs the matching desktop app and widget together in **C:\Program Files\Master Panel**, creates shortcuts and adds a Windows uninstall entry. No command window is needed. Your saved settings stay in the existing user data folder.
 
-- TDP adjustment with a draggable limit and measured CPU draw. On detected DC, the 395 model can select up to 85 W and the 385 up to 75 W. Battery stays capped at 55 W and USB-C at 40 W. The 65 W+ range is vivid orange with a caution symbol. Adapter and firmware capabilities still matter.
-- CPU Boost, fan presets and custom fan curves, with saved mode restoration.
-- Brightness, Night light temperature/schedule, and saved Natural/Vivid/Soft/OLED display profiles. Profile edits have a five-second Save/Cancel confirmation.
-- Customize: vector telemetry cards, three gray styles, seven accents, panel width and saved widget arrangement. CPU/GPU load, temperatures and available battery/charging data are selectable.
-- Front/rear controller mapping, local profiles, Temporary RAM and reviewed Permanent storage, backups, firmware checks and readback.
-- RTSS overlay, Windows volume controls and compatible FxSound EQ. RTSS and FxSound are optional separate installs. Lossless Scaling integration remains removed.
+The widget is signed with the included self-signed certificate. Setup adds that public certificate to Windows Trusted People and grants the widget loopback access to Master Panel. No private signing key is distributed. The Setup EXE has no commercial code-signing certificate, so Windows may show Unknown Publisher.
 
-## Install requirements and validation
+Use this full Setup for upgrades so both views are updated together. The older desktop-only self-updater does not install the widget.
 
-Windows x64, WebView2 for the UI, PawnIO for supported hardware control, and Xbox Game Bar for the widget. Enable **Open with Windows** to start at sign-in and restore saved controls. Replacing only the EXE does not update an older installed widget; use the full ZIP for this upgrade.
+WebView2 is required for the full interface, PawnIO for supported hardware controls, and Xbox Game Bar for the widget. FxSound and RTSS are optional separate installations. Open Win+G → Widgets → Master Panel after installation; the desktop app must be running. When Game Bar is dismissed, a pinned widget is telemetry-only in this release. Use Win+G to adjust controls.
 
-The widget is sideloaded using the included self-signed certificate. Its installer trusts that certificate locally and enables the widget's loopback connection to the app. The package includes install/uninstall scripts and a validation report.
+## Validation and limits
 
-Portable race tests and Windows software tests, controller-policy checks, native compilation, widget packaging, installation registration and the real app bridge are checked during the build. These checks do not validate physical Win 5 hardware or interaction inside a real Game Bar session. Gyro orientation/aiming, Game Bar controller focus and selected toolbar appearance, fan/flash/display/audio behavior and sleep/resume need device testing. No BIOS or battery charge-limit writes are added.
+See VALIDATION-3.0.1.txt in the installed folder for the checks actually completed. Mock/software tests do not prove physical sensor orientation, real controller routing, firmware flash persistence or device behavior. The build Mac cannot test GPD Win 5 hardware. Gyro does not write firmware or BIOS. Battery data is read-only and charge limits are not changed.
 
 ## Source and notices
 
-This public repository contains release documentation. GitHub's automatic **Source code** archives contain that documentation, not the Master Panel application project. Included notices and corresponding module source are available in **Settings → Third-party licenses**.
+This public repository distributes release files and documentation. GitHub’s automatic source archives contain that documentation. The complete application project is supplied separately to the owner for continued development; it includes vendored Go dependencies and the C# widget source. Third-party notices are available in Settings → Third-party licenses.
 
-Powered by Vincent · Support: mythvietnamese@gmail.com
+Powered by Vincent · mythvietnamese@gmail.com
