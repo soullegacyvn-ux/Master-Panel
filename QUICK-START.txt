@@ -1,4 +1,4 @@
-MASTER PANEL 3.0.2
+MASTER PANEL 3.1.0
 
 UPGRADE: Settings > Updates > Check > Download > Update & restart.
 From 3.0.1 the app restarts into a compatibility stage, then completes the matching
@@ -7,7 +7,7 @@ A Windows installation progress window may appear. Settings are preserved.
 
 FRESH INSTALL / MANUAL FALLBACK:
 1. Exit the old app from its tray menu.
-2. Open Master-Panel-v3.0.2-Setup.exe and approve Windows' Administrator prompt.
+2. Open Master-Panel-v3.1.0-Setup.exe and approve Windows' Administrator prompt.
 3. Click Install. The default folder is C:\Program Files\Master Panel.
 4. Open Master Panel from Start or the desktop shortcut.
 
@@ -24,11 +24,6 @@ Controller mapping in the widget uses an editor inside the widget content.
 Choose a source, choose its output, press Done, then Apply/Flash. Done only
 stages the mapping. Permanent flash still needs review and backup/readback.
 
-Gyro reads the Windows motion sensor, independently of Xbox 360 controller mode.
-It starts off. Open Gyro, use Check sensor, calibrate while stationary, then
-explicitly enable aiming. Windows must expose a functioning gyro device; an
-app update cannot install or repair a missing GPD/I2C sensor driver.
-
 The power chart shares the last 60 one-second battery samples between both
 views. Its size follows the panel and its W scale follows the readings. Missing
 samples are shown as gaps. It creates no extra sensor polling worker.
@@ -44,7 +39,7 @@ sign-in. No BIOS or battery charge-limit writes are added.
 Uninstall from Windows Settings > Apps > Installed apps > Master Panel.
 This removes the app, widget and its own certificate; user settings remain.
 
-Hardware, gyro axes, and real Game Bar controller focus need Win 5 testing.
+Hardware controls and real Game Bar controller focus need Win 5 testing.
 
 VIBRATION: Controller > Vibration level > Off / Low / High. Temporary applies
 for the current session; Restore reverts temporary controller changes. To keep
@@ -56,5 +51,3 @@ publisher download and opens its normal Windows installer. Finish that wizard,
 then check the connection. PawnIO may need a Master Panel restart. Nothing is
 silently installed. An installed FxSound starts in its tray on widget activation.
 
-NO GYRO: Gyro > Diagnose sensor, then Settings > Export support report. Driver
-metadata is included; accelerometer-only readings cannot provide gyro aiming.
