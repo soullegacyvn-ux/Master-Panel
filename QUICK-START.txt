@@ -1,4 +1,4 @@
-MASTER PANEL 3.1.0
+MASTER PANEL 3.2.0
 
 UPGRADE: Settings > Updates > Check > Download > Update & restart.
 From 3.0.1 the app restarts into a compatibility stage, then completes the matching
@@ -7,7 +7,7 @@ A Windows installation progress window may appear. Settings are preserved.
 
 FRESH INSTALL / MANUAL FALLBACK:
 1. Exit the old app from its tray menu.
-2. Open Master-Panel-v3.1.0-Setup.exe and approve Windows' Administrator prompt.
+2. Open Master-Panel-v3.2.0-Setup.exe and approve Windows' Administrator prompt.
 3. Click Install. The default folder is C:\Program Files\Master Panel.
 4. Open Master Panel from Start or the desktop shortcut.
 
@@ -51,3 +51,10 @@ publisher download and opens its normal Windows installer. Finish that wizard,
 then check the connection. PawnIO may need a Master Panel restart. Nothing is
 silently installed. An installed FxSound starts in its tray on widget activation.
 
+
+TDP RANGE AND RESET
+Performance > TDP range: enter Battery max and DC max, then Save range.
+This changes slider limits only. Select a TDP explicitly to apply it.
+Caution appears above 65 W on battery or above 75 W on DC.
+Reset selects 45 W with boost off, or your lower active source ceiling.
+Plugging in does not automatically increase TDP. Firmware may enforce lower limits.

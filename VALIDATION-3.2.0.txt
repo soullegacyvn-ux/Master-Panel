@@ -1,0 +1,29 @@
+MASTER PANEL 3.2.0 — VALIDATION SCOPE
+
+Automated release gates (all required before publishing):
+- Separate saved battery/DC ceilings, exact caution boundaries, source down-clamps,
+  no auto-raise, queued action revalidation and 45 W / lower-cap Reset.
+- Portable Go tests with the race detector; real loopback bridge unit test.
+- Windows Go tests/vet and native amd64 GUI build, product/version/manifest checks.
+- Shared HTML/JS parses; seven tabs resolve; DOM IDs are unique; native calls exist.
+- No motion tab, motion callbacks, polling timer, native sensor service, calibration
+  or mouse-aim injection; obsolete motion bindings are absent from installed RPC.
+- Node VM regressions execute shipped input/navigation, mapping/vibration review,
+  focus handoff, read-only rendering, volume/brightness and fan preset logic.
+- .NET controller source selection and trigger press/release hysteresis checks.
+- Official optional-download bytes match pinned publisher hashes.
+- Signed UWP package, Program Files GUI installer, matching app/widget identities,
+  shortcuts, uninstall entry, authenticated bridge and installer removal.
+- Actual installed 3.0.2 and 3.1.0 native process/helper -> 3.2.0 Setup, graceful app shutdown,
+  matching new app/widget and saved user data retained.
+- 3.0.1 compatibility path models the initial native-EXE swap, then executes the
+  new full-package helper. It does not replay the old Update UI/download leg.
+
+Software tests use mock hardware and a generic Windows runner.
+NOT VERIFIED on a real GPD Win 5: controller routing inside Game Bar, icon selection,
+physical vibration/mapping and flash persistence after reboot, sensor/driver values, actual 85/120 W acceptance/sustained operation,
+display/audio/fan hardware effects, suspend/resume, CPU/battery cost.
+A pinned widget outside Win+G remains telemetry-only. No BIOS/charge-limit writes.
+
+The release's GitHub Actions run and final checksums identify the tested build.
+The build Mac cannot run or certify Win 5 hardware behavior.

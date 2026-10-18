@@ -13,6 +13,6 @@ Old clients first replace the native app through their existing protected transa
 
 The full-package helper waits for normal app shutdown, installs the package, verifies the installed native version and registered UWP version, then restarts the app. Failed package attempts keep a diagnostic log and hold automatic retries. This does not claim rollback of every partially changed Windows package. The separate native-only transaction retains its verified rollback path.
 
-Release CI verifies official optional-component downloads, native builds, software tests, install/uninstall, the live installed bridge and upgrades from 3.0.1 and 3.0.2 installations. It models the 3.0.1 client's first native swap and runs the new helper; for 3.0.2 it uses the original installed native process and helper unchanged. Physical Win 5 behavior and the original 3.0.1 Update UI/network leg require device checks.
+Release CI verifies official optional-component downloads, native builds, software tests, install/uninstall, the live installed bridge and upgrades from 3.0.1, 3.0.2 and 3.1.0 installations. It models the 3.0.1 client's first native swap and runs the new helper; for 3.0.2 and 3.1.0 it uses the original installed native process and helper unchanged. Physical Win 5 behavior and the original 3.0.1 Update UI/network leg require device checks.
 
 The complete application project lives in the owner's separately supplied source archive. GitHub's automatic source ZIPs in this public repository contain release documentation.
