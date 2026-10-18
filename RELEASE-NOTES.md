@@ -1,12 +1,12 @@
-# Master Panel 3.2.1
+# Master Panel 3.3.0
 
-Maintenance update for the desktop panel and Xbox Game Bar widget.
+Tools Overview is available in both the desktop panel and Xbox Game Bar widget.
 
-- Stops TDP changes if recovery data cannot be saved before a hardware write.
-- Serializes optional service pause/resume with app exit and update restart, retaining recovery after an unconfirmed stop.
-- Reuses fresh fan/temperature readings and reduces repeated TDP, slider, EQ and bridge work.
-- Avoids a duplicate FxSound CLI refresh during low-volume checks.
-- Removes unused Lossless Scaling source and obsolete build wiring; updates the Go runtime and Windows dependency.
-- Keeps the existing separate battery/DC ceilings, source-specific caution and 45 W/lower-cap Reset behavior.
+- Sleep -> Hibernate: separate battery and plugged-in Windows timeouts.
+- Download Mode: temporary 8 W APU TDP, optional display behavior and stop timer; restores the previous limit when stopped. On Modern Standby battery, the screen stays on to keep downloading.
+- Memory Reduce: manual trimming of eligible background-process working sets.
+- Shared state and native control engine for both views. Download Mode blocks conflicting TDP actions and automatic restart for updates.
 
-Use the full Setup EXE to update both views together. Saved user settings are retained. See AUDIT-3.2.1.md and VALIDATION-3.2.1.txt for changes and test scope. Software checks do not replace physical Win 5 testing.
+Update in Settings -> Updates to install the matching desktop app and widget together. Saved settings are retained. For manual installation, exit Master Panel from the tray and run Master-Panel-v3.3.0-Setup.exe.
+
+8 W is APU TDP, not total device power. Automated Windows checks do not replace physical Win 5 sleep/resume, controller and hardware testing. No BIOS or battery charge-limit writes are added.

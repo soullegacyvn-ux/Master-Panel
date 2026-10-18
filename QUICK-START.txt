@@ -1,4 +1,15 @@
-MASTER PANEL 3.2.1
+Master Panel 3.3.0
+
+Update: Settings -> Updates -> Check for updates -> Download -> Update & restart.
+Use the full Setup package to update the desktop panel and widget together.
+For a manual install, exit the old copy from its tray icon, then run Setup.
+
+Tools Overview
+Sleep -> Hibernate: enable and choose separate battery/plugged-in delays.
+Download Mode: Start temporarily applies an 8 W APU TDP cap. Stop or the timer
+restores the earlier limit within the current source ceiling. On Modern Standby
+battery, the screen remains on to keep downloads running.
+Memory Reduce: use the Reduce button only when needed; no automatic cleaner.
 
 UPGRADE: Settings > Updates > Check > Download > Update & restart.
 From 3.0.1 the app restarts into a compatibility stage, then completes the matching
@@ -7,7 +18,7 @@ A Windows installation progress window may appear. Settings are preserved.
 
 FRESH INSTALL / MANUAL FALLBACK:
 1. Exit the old app from its tray menu.
-2. Open Master-Panel-v3.2.1-Setup.exe and approve Windows' Administrator prompt.
+2. Open Master-Panel-v3.3.0-Setup.exe and approve Windows' Administrator prompt.
 3. Click Install. The default folder is C:\Program Files\Master Panel.
 4. Open Master Panel from Start or the desktop shortcut.
 
