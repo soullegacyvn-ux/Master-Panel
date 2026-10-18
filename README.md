@@ -8,7 +8,7 @@ Run Master Panel and press the physical **Keyboard/Mouse ↔ Gamepad Swap button
 
 ## 3.3.2 update
 
-The Windows build has passed validation and is being prepared for publication. The download above opens the latest published package.
+The Windows package has passed the automated installation and update checks. Download Setup for a fresh install, or update both views from the app.
 
 TDP slider ceilings default to **85 W on battery / 100 W on DC**. Saving a range updates Master and Performance. Caution is a warning above **65 W on battery / 85 W on DC**, and does not block an explicit target within the saved range. Reset remains 45 W, or your lower source ceiling. Range changes never raise the active target by themselves.
 
@@ -35,4 +35,3 @@ See VALIDATION-3.3.2.txt for the automated release gate scope. Software checks c
 This public repository distributes release files and documentation. GitHub’s automatic source archives contain that documentation. The complete application project is supplied separately to the owner for continued development; it includes vendored Go dependencies and the C# widget source. Third-party notices are available in Settings → Third-party licenses.
 
 Powered by Vincent · mythvietnamese@gmail.com
-
