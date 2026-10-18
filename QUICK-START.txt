@@ -1,4 +1,4 @@
-Master Panel 3.3.2
+Master Panel 3.3.3
 
 Update: Settings -> Updates -> Check for updates -> Download -> Update & restart.
 Use the full Setup package to update the desktop panel and widget together.
@@ -18,7 +18,7 @@ A Windows installation progress window may appear. Settings are preserved.
 
 FRESH INSTALL / MANUAL FALLBACK:
 1. Exit the old app from its tray menu.
-2. Open Master-Panel-v3.3.2-Setup.exe and approve Windows' Administrator prompt.
+2. Open Master-Panel-v3.3.3-Setup.exe and approve Windows' Administrator prompt.
 3. Click Install. The default folder is C:\Program Files\Master Panel.
 4. Open Master Panel from Start or the desktop shortcut.
 
@@ -64,10 +64,11 @@ silently installed. An installed FxSound starts in its tray on widget activation
 
 
 TDP RANGE AND RESET
-Performance > TDP range: enter Battery max and DC max, then Save range.
+Performance > Maximum TDP: choose a preset; the maximum saves immediately.
+Battery presets: 65 / 75 / 85 W. DC presets: 65 / 75 / 85 / 100 / 120 W.
 Defaults are 85 W on battery and 100 W on DC.
 This changes slider limits only. Select a TDP explicitly to apply it.
-Caution appears above 65 W on battery or above 85 W on DC.
+Caution starts at 65 W on both battery and DC; it does not block adjustment.
 Reset selects 45 W with boost off, or your lower active source ceiling.
 Plugging in does not automatically increase TDP. Firmware may enforce lower limits.
 

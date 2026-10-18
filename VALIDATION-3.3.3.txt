@@ -1,0 +1,9 @@
+Master Panel 3.3.3 validation scope
+
+Required Windows gates: complete Go and vendored WebView2 tests; vet; known-vulnerability scan; eleven shipped-JavaScript/controller suites; .NET controller checks; power bindings against Windows SDK; optional component publisher checks; native EXE identity; signed widget; GUI install/bridge/uninstall; package updates from 3.0.1, 3.0.2, 3.1.0, 3.2.0, 3.2.1, 3.3.0, 3.3.1 and 3.3.2 with settings retained.
+
+New checks cover Windows parent-process identity inheritance, existing FxSound owner reuse, per-source maximum presets and persisted atomic acknowledgments, both TDP sliders, save failures, mode boundaries from 65 W, and existing interaction ownership.
+
+Browser preview uses simulated values to inspect compact widget layouts and direct preset selection; it does not simulate hardware success. No new runtime dependency or background service is added.
+
+The normal-user launch path is tested when an unelevated desktop shell or split token is available; CI without these checks fail-closed behavior and the actual parent-process primitive. Real Win 5 audio, power, reboot and controller testing remain necessary.
