@@ -1,12 +1,11 @@
-# Master Panel 3.3.0
+# Master Panel 3.3.1
 
-Tools Overview is available in both the desktop panel and Xbox Game Bar widget.
+Fixes incorrect Sleep detection on Modern Standby PCs, including the user's Win 5 with S0 Low Power Idle and Hibernate available.
 
-- Sleep -> Hibernate: separate battery and plugged-in Windows timeouts.
-- Download Mode: temporary 8 W APU TDP, optional display behavior and stop timer; restores the previous limit when stopped. On Modern Standby battery, the screen stays on to keep downloading.
-- Memory Reduce: manual trimming of eligible background-process working sets.
-- Shared state and native control engine for both views. Download Mode blocks conflicting TDP actions and automatic restart for updates.
+- Reads the Windows SDK power capability structure by named fields. The 3.3.0 reader used the wrong byte for the AoAc / Modern Standby flag and could show “Windows exposes no supported sleep state”.
+- Correct detection also restores the intended screen-on protection for Download Mode on Modern Standby battery.
+- Adds byte-level regression fixtures and an independent native Windows SDK layout/runtime check.
 
-Update in Settings -> Updates to install the matching desktop app and widget together. Saved settings are retained. For manual installation, exit Master Panel from the tray and run Master-Panel-v3.3.0-Setup.exe.
+Update from Settings → Updates. The desktop panel and Xbox Game Bar widget update together and retain saved settings. Stop Download Mode and close games before Update & restart. For manual installation, exit the app from its tray menu and run Master-Panel-v3.3.1-Setup.exe.
 
-8 W is APU TDP, not total device power. Automated Windows checks do not replace physical Win 5 sleep/resume, controller and hardware testing. No BIOS or battery charge-limit writes are added.
+Sleep -> Hibernate timing/resume and real screen-off download behavior still require on-device testing. No BIOS, firmware or driver changes are made by this fix.

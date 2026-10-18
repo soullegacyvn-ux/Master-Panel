@@ -1,4 +1,4 @@
-# Tools Overview — 3.3.0
+# Tools Overview — 3.3.1
 
 The accepted compact Overview is part of the shared offline page. Both the
 desktop and Xbox Game Bar call the same four native bindings: `refreshTools`,

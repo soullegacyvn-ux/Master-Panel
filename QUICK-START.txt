@@ -1,4 +1,4 @@
-Master Panel 3.3.0
+Master Panel 3.3.1
 
 Update: Settings -> Updates -> Check for updates -> Download -> Update & restart.
 Use the full Setup package to update the desktop panel and widget together.
@@ -18,7 +18,7 @@ A Windows installation progress window may appear. Settings are preserved.
 
 FRESH INSTALL / MANUAL FALLBACK:
 1. Exit the old app from its tray menu.
-2. Open Master-Panel-v3.3.0-Setup.exe and approve Windows' Administrator prompt.
+2. Open Master-Panel-v3.3.1-Setup.exe and approve Windows' Administrator prompt.
 3. Click Install. The default folder is C:\Program Files\Master Panel.
 4. Open Master Panel from Start or the desktop shortcut.
 

@@ -1,0 +1,35 @@
+Master Panel 3.3.1 — Tools Overview
+
+Software release gates; no physical GPD Win 5 execution on this Mac.
+User powercfg /a confirms S0 Low Power Idle and Hibernate on the affected Win 5.
+The 3.3.0 native binding read reserved byte 25 instead of the AoAc flag at 20.
+3.3.1 uses the named SDK layout, tests S0-only and reserved-byte fixtures,
+and compares Go with a C++ Windows SDK oracle in Windows CI.
+
+Desktop and Xbox Game Bar share the same Tools UI and native engine:
+- Sleep -> Hibernate: separate battery/AC Windows timeouts; explicit enable;
+  original-value journal, readback and guarded recovery.
+- Download Mode: temporary 8 W APU TDP, no saved-TDP overwrite, optional display
+  behavior, manual/30/60/120-minute stop and source-limited restoration.
+- Memory Reduce: manual working-set trim for eligible same-user background
+  processes; visible window families, games, Windows and protected apps excluded.
+
+Release gates:
+- Go tests and Windows vet, vendored WebView regressions and known-vulnerability scan.
+- Ten UI/bridge/controller suites and native widget controller checks.
+- Official optional-component publisher verification without installing components.
+- AMD64 GUI EXE version, current embedded UI, icon and administrator manifest.
+- Signed UWP build; Program Files installer, matching widget, real bridge and uninstall.
+- Actual in-app full-package helpers from 3.0.2, 3.1.0, 3.2.0, 3.2.1 and 3.3.0; legacy
+  3.0.1 compatibility EXE stage; normal parent shutdown and preserved user settings.
+
+Still requires on-device checks:
+- Sleep -> hibernate timing and resume with the user's drivers and games.
+- Screen-off downloads on DC/traditional sleep; screen-on downloads on Modern
+  Standby battery; manual sleep, unplug/replug, timer/exit and crash recovery.
+- Real Game Bar/controller focus, visual fit and hardware power/fan/audio behavior.
+
+8 W is an APU TDP cap, not total battery/wall draw. On Modern Standby battery,
+Windows requires the screen to stay on for reliable downloads. Memory trimming
+claims no guaranteed freed amount or FPS improvement. No BIOS or charge-limit
+writes and no physical-hardware test claim.
