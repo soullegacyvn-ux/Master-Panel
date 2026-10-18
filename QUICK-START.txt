@@ -1,4 +1,4 @@
-MASTER PANEL 3.2.0
+MASTER PANEL 3.2.1
 
 UPGRADE: Settings > Updates > Check > Download > Update & restart.
 From 3.0.1 the app restarts into a compatibility stage, then completes the matching
@@ -7,7 +7,7 @@ A Windows installation progress window may appear. Settings are preserved.
 
 FRESH INSTALL / MANUAL FALLBACK:
 1. Exit the old app from its tray menu.
-2. Open Master-Panel-v3.2.0-Setup.exe and approve Windows' Administrator prompt.
+2. Open Master-Panel-v3.2.1-Setup.exe and approve Windows' Administrator prompt.
 3. Click Install. The default folder is C:\Program Files\Master Panel.
 4. Open Master Panel from Start or the desktop shortcut.
 

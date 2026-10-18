@@ -1,27 +1,27 @@
-# Master Panel 3.2.0
+# Master Panel 3.2.1
 
 A compact control panel and Xbox Game Bar widget for GPD Win 5.
 
-[Download the Windows package](https://github.com/soullegacyvn-ux/Master-Panel/releases/tag/v3.2.0) · [Quick start](QUICK-START.txt)
+[Download the Windows package](https://github.com/soullegacyvn-ux/Master-Panel/releases/tag/v3.2.1) · [Quick start](QUICK-START.txt)
 
 Run Master Panel and press the physical **Keyboard/Mouse ↔ Gamepad Swap button** to open/hide the panel. **Open with Windows** starts it at sign-in and restores saved controls. Win+G → Widgets → Master Panel opens the installed widget; the desktop app supplies its controls.
 
 ## In this release
 
-- Performance → TDP range saves separate battery and DC ceilings: battery 8–85 W, DC 8–120 W. Existing defaults remain 55 W battery / 85 W DC on the 395 model until changed. USB-C and unidentified AC stay at 40 W.
-- Raising a ceiling only expands the slider. Plugging in never raises the current target. Lowering a ceiling or changing to a lower-power source constrains all three power limits, including short boost.
-- Orange Caution starts strictly above 65 W on battery and above 75 W on DC. These are warning thresholds, not proof of available cooling or electrical capacity.
-- Reset selects 45 W with short boost off, or a lower active ceiling. Normal app exit and previous-session recovery also use this baseline instead of restoring an old high limit.
-- Both interfaces use the same native engine, saved range and explicit actions. Gyro remains removed.
-- Existing controller/vibration controls, publisher-verified optional component downloads and the full-package in-app updater remain available.
+- Stops a TDP change if its recovery file cannot be saved before a hardware write.
+- Serializes optional service pause/resume with app exit and update restart. Unconfirmed stops keep their recovery record visible.
+- Reuses fresh temperature/fan readings and reduces repeated TDP, slider, EQ and bridge work.
+- Avoids a duplicate FxSound CLI refresh in low-volume checks.
+- Removes unused Lossless Scaling source and obsolete build wiring; updates the production Go runtime and Windows library.
+- Keeps the separate battery/DC ceilings, >65 W battery / >75 W DC caution and 45 W/lower-ceiling Reset behavior from 3.2.0.
 
-The new ceiling is a software setting. The app still verifies SMU readback and reports rejected or firmware-clamped requests. It does not unlock BIOS limits or guarantee that a Win 5 can sustain 120 W.
+These changes reduce redundant work. No measured CPU/RAM/battery-saving percentage is claimed. Physical Win 5 checks remain necessary.
 
 ## Install
 
 Use **Settings → Updates → Check for updates → Download → Update & restart** to upgrade both the panel and widget. The 3.0.1 updater first loads a compatibility EXE, then completes the matching full package; keep the app hidden and your game closed while it finishes. Saved settings are retained.
 
-For a fresh install or a manual fallback, exit the old Master Panel copy from its tray menu, then run **Master-Panel-v3.2.0-Setup.exe**. Setup installs the matching desktop app and widget together in **C:\Program Files\Master Panel**, creates shortcuts and adds a Windows uninstall entry. No command window is needed. Your saved settings stay in the existing user data folder.
+For a fresh install or a manual fallback, exit the old Master Panel copy from its tray menu, then run **Master-Panel-v3.2.1-Setup.exe**. Setup installs the matching desktop app and widget together in **C:\Program Files\Master Panel**, creates shortcuts and adds a Windows uninstall entry. No command window is needed. Your saved settings stay in the existing user data folder.
 
 The widget is signed with the included self-signed certificate. Setup adds that public certificate to Windows Trusted People and grants the widget loopback access to Master Panel. No private signing key is distributed. The Setup EXE has no commercial code-signing certificate, so Windows may show Unknown Publisher.
 
@@ -29,7 +29,7 @@ WebView2 is required for the full interface, PawnIO for supported hardware contr
 
 ## Validation and limits
 
-See VALIDATION-3.2.0.txt for the automated release gate scope. Software checks cover the shared UI, controller policy, installed bridge and package upgrades. Physical controller focus, vibration/flash persistence, display/audio/fan behavior and reboot recovery still need a real Win 5. No BIOS or battery charge-limit writes are added.
+See VALIDATION-3.2.1.txt for the automated release gate scope. Software checks cover the shared UI, controller policy, installed bridge and package upgrades. Physical controller focus, vibration/flash persistence, display/audio/fan behavior and reboot recovery still need a real Win 5. No BIOS or battery charge-limit writes are added.
 
 ## Source and notices
 
