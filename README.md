@@ -1,12 +1,14 @@
-# Master Panel 3.3.2
+# Master Panel
 
 A compact control panel and Xbox Game Bar widget for GPD Win 5.
 
-[Download the Windows package](https://github.com/soullegacyvn-ux/Master-Panel/releases/tag/v3.3.2) · [Quick start](QUICK-START.txt)
+[Download the Windows package](https://github.com/soullegacyvn-ux/Master-Panel/releases/latest) · [Quick start](QUICK-START.txt)
 
 Run Master Panel and press the physical **Keyboard/Mouse ↔ Gamepad Swap button** to open/hide the panel. **Open with Windows** starts it at sign-in and restores saved controls. Win+G → Widgets → Master Panel opens the installed widget; the desktop app supplies its controls.
 
-## In this release
+## 3.3.2 update
+
+The Windows build has passed validation and is being prepared for publication. The download above opens the latest published package.
 
 TDP slider ceilings default to **85 W on battery / 100 W on DC**. Saving a range updates Master and Performance. Caution is a warning above **65 W on battery / 85 W on DC**, and does not block an explicit target within the saved range. Reset remains 45 W, or your lower source ceiling. Range changes never raise the active target by themselves.
 
