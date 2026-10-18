@@ -1,0 +1,6 @@
+Master Panel 3.3.2 validation scope
+
+Local: pure TDP range/default/migration tests, shared-page desktop/widget range-save and high-target regression checks, Windows compilation/vet and native EXE identity.
+Windows release gate: full Go suite, real fake-owner FxSound reuse test, normal-user child launch or fail-closed no-UAC-token check, battery/DC range save + high target through a fake SMU, independent Windows SDK power ABI/runtime comparison, UI/controller suites, vulnerability scan, widget signing, GUI installer/bridge/uninstall and package updates from 3.0.1 through 3.3.1.
+
+No physical Win 5, real audio reproduction, high-wattage SMU measurements, sleep/resume or Game Bar controller hardware testing is claimed. Software process checks do not prove the user's audio echo is eliminated. If two persistent FxSound owners already exist, close them from their tray icons then open one copy.
