@@ -1,4 +1,4 @@
-Master Panel 3.3.3
+Master Panel 3.3.4
 
 Update: Settings -> Updates -> Check for updates -> Download -> Update & restart.
 Use the full Setup package to update the desktop panel and widget together.
@@ -18,7 +18,7 @@ A Windows installation progress window may appear. Settings are preserved.
 
 FRESH INSTALL / MANUAL FALLBACK:
 1. Exit the old app from its tray menu.
-2. Open Master-Panel-v3.3.3-Setup.exe and approve Windows' Administrator prompt.
+2. Open Master-Panel-v3.3.4-Setup.exe and approve Windows' Administrator prompt.
 3. Click Install. The default folder is C:\Program Files\Master Panel.
 4. Open Master Panel from Start or the desktop shortcut.
 
@@ -76,3 +76,5 @@ FXSOUND: the panel and widget reuse the same FxSound process in your Windows
 session. A new copy starts with normal user privileges. Existing duplicate
 processors are reported; exit both from their tray icons and open FxSound once.
 Temporary command-line helpers are excluded from duplicate-owner detection.
+
+RTSS: selected presets are highlighted and shared between panel/widget. Master overlay temporarily hides RTSS own statistics and restores them on disable/exit. If another provider is listed in RTSS, turn off its OSD at the source to remove duplicate readings.

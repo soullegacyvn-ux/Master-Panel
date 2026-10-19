@@ -1,0 +1,9 @@
+Master Panel 3.3.4 validation scope
+
+Required release gates: complete Windows Go and vendored WebView2 tests; vet; vulnerability scan; fourteen JavaScript/controller suites; .NET controller checks; power bindings against Windows SDK; native EXE identity; signed widget; GUI install/bridge/uninstall; nine in-app package upgrade fixtures from 3.0.1 through 3.3.3 with settings retained.
+
+RTSS checks cover selected/shared presets, concurrent-provider coexistence, modern 32KB provider text, primary-slot ownership, stale own-slot cleanup, real SDK profiles/statistics ownership and mapping publication. Other providers are not erased. The publisher pauses its own output by default when another provider is active.
+
+AMD Custom Color checks cover five native ADLX bindings, capability/range checks, write/readback and rollback, interface ownership, preserved legacy profiles, live AMD baseline migration, read-only Refresh and synchronized visible-view polling. Fake Windows callbacks test the ABI; a generic CI runner cannot verify an actual AMD driver.
+
+Actual Win 5 controller, audio, fan, sleep/reboot behavior, Adrenalin values and in-game Winhanced/RTSS raster output require device testing. No BIOS or battery charge-limit writes are added. ADLX uses the installed AMD driver DLL; no new bundled runtime or service.

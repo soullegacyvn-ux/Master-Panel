@@ -1,12 +1,13 @@
-Fixes FxSound launching and replaces manual TDP ceiling entry with immediate presets in the desktop panel and Xbox Game Bar widget.
+# Master Panel 3.3.4
 
-- FxSound can launch and receive commands through the verified, normal-user Windows desktop shell. This avoids the split-token access-denied path reported in 3.3.2. Existing FxSound ownership and duplicate-instance checks remain.
-- Maximum TDP saves immediately: battery 65 / 75 / 85 W; DC 65 / 75 / 85 / 100 / 120 W. The engine updates only the chosen source and returns its saved state. Raising the ceiling never raises active TDP. Lowering it clamps a higher active target.
-- Five shared modes: Power save 8–<18 W; Performance 18–<28 W; Turbo 28–<48 W; Extreme 48–<65 W; Caution from 65 W on both battery and DC. Caution warns without blocking a target within the selected range. Reset remains 45 W, or a lower source ceiling.
-- Master uses the entire usable slider span, removes the 0 W/locked gray section and idle instructions, and adds brighter mode colors.
-- Master metric cards show only icon, title and reading; all 19 metric types have distinct vector symbols.
-- The widget has a smaller icon rail with Tools visible at short heights, direct accent coloring for the selected menu, and more compact Master presets/cards. Theme accents are more vivid; MP placement is optically adjusted.
+Improves RTSS overlay coexistence and connects Display colors to AMD Custom Color in both the desktop panel and Xbox Game Bar widget.
 
-Update both views from Settings → Updates. Stop Download Mode and close games before Update & restart. Manual fallback: exit Master Panel from its tray menu and run Master-Panel-v3.3.3-Setup.exe.
+- RTSS presets show their selected state, reload and synchronize across both views. Layout actions use the current shared configuration. Grid/Ribbon spacing avoids overlapping labels and values.
+- Detects other RTSS providers, including modern 32KB text. Master Panel pauses its own overlay by default while another provider is active and resumes when it stops. Optional “Show alongside other overlays” allows explicit overlap. Stale slots owned by Master Panel are cleared; foreign providers remain untouched.
+- RTSS diagnostics show the actual connection error, provider names and running build. RTSS’s own statistics are restored when Master Panel releases its owned settings.
+- Display uses AMD ADLX Custom Color for brightness, contrast, saturation, hue and color temperature. Refresh reads the driver without applying a profile; visible idle controls read back live changes.
+- Legacy color profiles are kept separately. On first use, the new color store starts from current AMD settings, avoiding automatic replay of old values. Natural captures that starting baseline. Night light remains a separate Windows control.
 
-Physical Win 5 audio playback, high-power hardware readback and controller use still require on-device testing. The normal-user launch is tested with Windows process helpers; CI without a normal Explorer shell cannot replace a real split-UAC desktop test. Firmware and USB-C/unknown-source limits remain applicable.
+Update both views from **Settings → Updates → Check for updates → Download → Update & restart**. For manual installation, exit Master Panel from the tray and run **Master-Panel-v3.3.4-Setup.exe**. Saved settings are retained; no uninstall is needed. The separate native EXE supports older updaters.
+
+Automated Windows checks cover software behavior, the real RTSS SDK, widget packaging, Program Files installation and upgrades. Actual Win 5/Adrenalin behavior and Winhanced overlays inside a game still need device testing.
