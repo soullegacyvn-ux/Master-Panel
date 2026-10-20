@@ -1,80 +1,57 @@
-Master Panel 3.3.4
+Master Panel 4.0.0 - Windows x64
 
-Update: Settings -> Updates -> Check for updates -> Download -> Update & restart.
-Use the full Setup package to update the desktop panel and widget together.
-For a manual install, exit the old copy from its tray icon, then run Setup.
+INSTALL / UPDATE
+Exit the old Master Panel from its tray menu, then run
+Master-Panel-v4.0.0-Setup.exe. The default location is
+C:\Program Files\Master Panel. Setup installs both panel and matching
+Game Bar widget and keeps user settings. No normal upgrade uninstall is needed.
 
-Tools Overview
-Sleep -> Hibernate: enable and choose separate battery/plugged-in delays.
-Download Mode: Start temporarily applies an 8 W APU TDP cap. Stop or the timer
-restores the earlier limit within the current source ceiling. On Modern Standby
-battery, the screen remains on to keep downloads running.
-Memory Reduce: use the Reduce button only when needed; no automatic cleaner.
+In-app: Settings > Updates > Check for updates > Download > Update & restart.
+Save work and close games before installing a full package.
 
-UPGRADE: Settings > Updates > Check > Download > Update & restart.
-From 3.0.1 the app restarts into a compatibility stage, then completes the matching
-panel/widget package. Close games and leave the panel hidden while it finishes.
-A Windows installation progress window may appear. Settings are preserved.
+OPEN
+Desktop: physical Keyboard/Mouse <-> Gamepad Swap button.
+Widget: Win+G > Widgets > Master Panel. Open Win+G to change settings; a pinned
+widget with Game Bar dismissed is telemetry-only. LT/RT switch widget tabs.
+Release held controller inputs after opening or switching focus.
 
-FRESH INSTALL / MANUAL FALLBACK:
-1. Exit the old app from its tray menu.
-2. Open Master-Panel-v3.3.4-Setup.exe and approve Windows' Administrator prompt.
-3. Click Install. The default folder is C:\Program Files\Master Panel.
-4. Open Master Panel from Start or the desktop shortcut.
+POWER / FAN
+Maximum TDP presets save immediately and change the slider ceiling only.
+Battery: 65 / 75 / 85 W. DC: 65 / 75 / 85 / 100 / 120 W.
+Defaults: battery 85 W; DC 100 W. Select TDP explicitly to apply it.
+Reset selects 45 W with boost off, or the lower active source ceiling.
+Plugging in never automatically increases TDP. Firmware can enforce lower limits.
+Fan settings use fresh temperature/RPM samples and return to EC Auto on a fault
+or resume. A software process cannot guarantee recovery after power loss.
 
-Setup installs the desktop app and Xbox Game Bar widget together. It does not
-require opening a command window. The widget uses its included self-signed
-certificate and a local loopback connection. Saved user settings are retained.
+DISPLAY / AUDIO
+Color profiles use supported AMD Custom Color. Night light uses Windows control.
+Windows volume/mute work independently of optional FxSound status requests.
+Panel and widget use the same FxSound process for the Windows session.
 
-DESKTOP: press the physical Keyboard/Mouse <-> Gamepad Swap button.
-WIDGET: Win+G > Widgets > Master Panel. LT/RT switch widget tabs.
-Menu opens Settings / header actions; B returns to the current menu.
-Release held inputs after opening or switching focus.
+CONTROLLER
+Choose a source, choose its output, press Done, then Apply. Done stages an edit.
+Permanent flash requires its review, backup and readback; keep power connected
+and the controller attached during writes. Gyro is not included.
 
-Controller mapping in the widget uses an editor inside the widget content.
-Choose a source, choose its output, press Done, then Apply/Flash. Done only
-stages the mapping. Permanent flash still needs review and backup/readback.
+TOOLS
+Download Mode temporarily requests 8 W, then restores the prior limit within
+the active source ceiling. Sleep to Hibernate depends on Windows capabilities.
+Memory Reduce runs only on demand. Lossless Scaling requires a separate Steam
+installation; choose its location in Tools if automatic detection misses it.
 
-The power chart shares the last 60 one-second battery samples between both
-views. Its size follows the panel and its W scale follows the readings. Missing
-samples are shown as gaps. It creates no extra sensor polling worker.
+RTSS
+Choose a font/preset in the RTSS tab. Time, date and battery time are separate
+fields. Displayed FG FPS is measured when available; missing readings show --.
+Master Panel cleans only its own output and preserves other overlay providers.
+If a duplicate bar appears with Winhanced, keep the bar visible, select
+Settings > RTSS troubleshooting > Check connection, then use Open data folder
+to find rtss-diagnostics.json. Closing HUD alone may leave its backend running.
 
-Fan output shows the software manual range, measured RPM and thermal status.
-Auto duty is unavailable when the EC reports only automatic mode. The app does
-not invent an RPM minimum/maximum or guarantee a safe temperature from RPM.
-
-WebView2 is required for the full UI, PawnIO for supported hardware controls,
-and Xbox Game Bar for the widget. Open with Windows restores saved controls at
-sign-in. No BIOS or battery charge-limit writes are added.
-
-Uninstall from Windows Settings > Apps > Installed apps > Master Panel.
-This removes the app, widget and its own certificate; user settings remain.
-
-Hardware controls and real Game Bar controller focus need Win 5 testing.
-
-VIBRATION: Controller > Vibration level > Off / Low / High. Temporary applies
-for the current session; Restore reverts temporary controller changes. To keep
-it, select Permanent > Flash vibration > confirm. Do not disconnect during a
-write. Physical vibration and reboot persistence require a Win 5 check.
-
-COMPONENTS: Settings > Components > Download > Install. The app verifies each
-publisher download and opens its normal Windows installer. Finish that wizard,
-then check the connection. PawnIO may need a Master Panel restart. Nothing is
-silently installed. An installed FxSound starts in its tray on widget activation.
-
-
-TDP RANGE AND RESET
-Performance > Maximum TDP: choose a preset; the maximum saves immediately.
-Battery presets: 65 / 75 / 85 W. DC presets: 65 / 75 / 85 / 100 / 120 W.
-Defaults are 85 W on battery and 100 W on DC.
-This changes slider limits only. Select a TDP explicitly to apply it.
-Caution starts at 65 W on both battery and DC; it does not block adjustment.
-Reset selects 45 W with boost off, or your lower active source ceiling.
-Plugging in does not automatically increase TDP. Firmware may enforce lower limits.
-
-FXSOUND: the panel and widget reuse the same FxSound process in your Windows
-session. A new copy starts with normal user privileges. Existing duplicate
-processors are reported; exit both from their tray icons and open FxSound once.
-Temporary command-line helpers are excluded from duplicate-owner detection.
-
-RTSS: selected presets are highlighted and shared between panel/widget. Master overlay temporarily hides RTSS own statistics and restores them on disable/exit. If another provider is listed in RTSS, turn off its OSD at the source to remove duplicate readings.
+COMPONENTS / SUPPORT
+WebView2: full UI. PawnIO: supported hardware control. Xbox Game Bar: widget.
+Settings > Components offers official optional RTSS, FxSound and PawnIO setup.
+Open with Windows starts the panel and restores saved preferences at sign-in.
+Settings > Report a problem creates a local diagnostic ZIP for support.
+Uninstall from Windows Settings > Apps; user settings are retained.
+No BIOS or battery charge-limit writes are added.

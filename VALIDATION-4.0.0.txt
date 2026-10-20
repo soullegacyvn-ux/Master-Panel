@@ -1,0 +1,34 @@
+Master Panel 4.0.0 - Windows stability release
+
+Release acceptance requires the matching source build to pass every mandatory
+Windows CI gate. The accepted run and checksums identify the tested package.
+
+Required software checks:
+- Portable and native Windows Go race tests, unit/integration tests and vet.
+- Deferred view/controller reply, TDP draft and shared UI regressions.
+- Native RTSS SDK, independent C++ slot oracle, own cleanup retry and coexistence.
+- Native fonts, power capabilities, LS ABI and PresentMon lifecycle checks.
+- Official optional-component download verification.
+- Program Files installer/uninstaller and original-user elevated launch.
+- Matching app/widget full-package updates from 3.3.4 and 3.4.2 with saved settings.
+
+Physical Win 5 hardware is not exercised on the hosted Windows runner. Real
+EC/SMU behavior, flash/vibration persistence, game rendering, actual LS displayed
+FPS and Winhanced boot coexistence require device testing.
+
+Master Panel does not erase foreign overlay data or disable Winhanced services.
+No BIOS or battery charge-limit writes are added.
+
+Accepted build: 2026-10-20
+https://github.com/soullegacyvn-ux/master-panel-xbox-widget/actions/runs/39426099346
+Private source commit: 9644a1618e4e692efb91cf8e8d949a08cc67dce0
+Source ZIP SHA256:
+353b88cc45b2ad32e93e55f51583566399fafaa5ac944c56299066cc4fbbf575
+Setup SHA256:
+f7ea83f524cd610f390de988bac210ba575f2b1718f5d5b807a54fcbe299fae0
+Native EXE SHA256:
+1b03291527680986e5adf6635ceb92a79576deaf4592ce9ecc400fd4be42a5b5
+The native Windows EXE is byte-identical to the matching local cross-build.
+All required native gate outcomes passed. The PresentMon hosted check validates
+its lifecycle/protocol and honest unavailable-data behavior on software display;
+it does not prove physical LS generated-frame telemetry.
