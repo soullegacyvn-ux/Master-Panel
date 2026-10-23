@@ -1,42 +1,65 @@
-# Master Panel 4.0.0
+![MasterPanel: PC freedom. Console comfort.](media/masterpanel-cover.png)
 
-Windows control panel and Xbox Game Bar widget for GPD Win 5.
+# MasterPanel
 
-[Windows installer](https://github.com/soullegacyvn-ux/Master-Panel/releases/tag/v4.0.0) · [Quick start](QUICK-START.txt) · [Stability and validation](STABILITY.md)
+A console-like home for **Windows handhelds**. Fullscreen game library, quick Panel controls and an Xbox Game Bar Widget, built around playing with a controller.
 
-The desktop panel and widget share one hardware engine and saved settings. Use the physical Keyboard/Mouse ↔ Gamepad Swap button for the desktop panel, or Win+G → Widgets → Master Panel.
+**[Download for Windows](https://github.com/soullegacyvn-ux/Master-Panel/releases/latest)** · **[Join Discord](https://discord.gg/n2fD2jvjvz)** · [Website](https://master-panel.net/) · [Patreon](https://www.patreon.com/c/masterpanel)
 
-## What changed
+## One app, three ways in
 
-- Apply source ceilings on the first telemetry sample too, including a DC-to-battery change during boot recovery. Plugging in does not raise the chosen TDP; Reset remains 45 W or the lower active ceiling.
-- Separate slow FxSound status work from Windows volume/mute controls, with one serialized FxSound request and failure backoff.
-- Discard deferred widget actions and controller samples after view ownership changes.
-- Retry failed cleanup of Master Panel's own RTSS output, including a saved-Off startup after a crash; stop retry writes once cleanup succeeds.
-- Record bounded, read-only RTSS slot and loaded-plugin diagnostics on Check connection. Other applications' output is preserved.
-- Refresh the shared Master TDP control with compact readings, a cold-to-hot mode scale and a complete focus outline; adapt metric cards to narrow panels.
+- **Fullscreen Home:** browse your game library, open game details and keep per-game preferences close at hand.
+- **Panel:** reach supported power, cooling, display and controller controls beside your game.
+- **Xbox Game Bar Widget:** open your shared controls through Win+G.
 
-The release retains AMD Custom Color, Night light, fan controls, controller mapping/vibration, configurable Master cards, optional FxSound, RTSS typography, shared Lossless Scaling controls and Tools Overview. Gyro remains removed.
+One shared control engine connects the interfaces and saved settings. The aim is a light, fast experience that feels at home on a handheld.
 
-## Install or update
+![MasterPanel fullscreen Home development preview](media/fullscreen-home.png)
 
-Exit the previous Master Panel from its tray menu, then run **Master-Panel-v4.0.0-Setup.exe**. Setup installs the matching desktop panel and widget in **C:\Program Files\Master Panel** and retains user settings. No uninstall is needed for a normal upgrade.
+*Product preview with sample data. The current stable download includes Panel and Widget; fullscreen Home is in development. Features and hardware tuning vary by release and supported device profile. Check the latest release notes before installing.*
 
-In-app updates use **Settings → Updates → Check for updates → Download → Update & restart** when the release is available on the stable channel. The complete package updates both views.
+## Controls, close at hand
 
-WebView2 is required for the full UI. PawnIO is required for supported hardware controls; RTSS, FxSound and Lossless Scaling are optional. Settings → Components opens official component installers. Lossless Scaling is purchased separately through Steam.
+Adjust supported TDP limits, customize six presets and compare the limit with actual CPU power draw. Pick fan profiles or a custom curve, tune display settings, map supported buttons and save profiles.
 
-The widget uses the included self-signed public certificate and local loopback access. No private signing key is distributed. The installer has no commercial code-signing certificate.
+Optional RTSS, compatible FxSound and Windows Lossless Scaling controls bring your existing tools into the same place. Lossless Scaling is purchased separately on Steam.
 
-## Validation and limits
+<details><summary>See Panel and cooling previews</summary>
 
-See VALIDATION-4.0.0.txt and the matching accepted Windows CI run for the exact software checks. Physical Win 5 controls, game rendering and Winhanced boot coexistence require device verification. A successful generic Windows build does not prove those outcomes.
+<table><tr><td width="50%"><img src="media/panel-master.png" alt="MasterPanel controls preview with sample readings" width="100%"></td><td width="50%"><img src="media/panel-fan.png" alt="Fan curve preview with sample readings" width="100%"></td></tr><tr><td align="center">Panel</td><td align="center">Cooling</td></tr></table>
 
-Winhanced may use RTSS independently of Master Panel. Master Panel does not disable its background services or erase its overlay. A duplicate overlay that returns at boot needs a diagnostic captured while it is present.
+</details>
 
-No BIOS or battery charge-limit writes are added. Firmware can enforce lower power limits.
+## Get started
 
-## Source and notices
+1. Choose the Windows **Setup EXE** under Assets in the [latest stable release](https://github.com/soullegacyvn-ux/Master-Panel/releases/latest).
+2. Exit an older Panel from its tray menu before running Setup. A normal upgrade keeps user settings and installs the matching interfaces included in that release.
+3. Use the installed shortcuts. On supported devices, the physical swap button opens Panel. For the Widget: **Win+G → Widgets → Master Panel**.
 
-The public release repository contains binaries and documentation; GitHub's automatic source archives contain that documentation. The complete application source is supplied separately to the owner. Third-party notices are available in Settings → Third-party licenses.
+Windows 11 x64 is the intended platform. **WebView2** displays the interface; **PawnIO** enables supported hardware controls, which require elevated access. **Settings → Components** links to official installers. The stable 4.0.0 hardware controls target GPD Win 5; a broader product direction does not enable unverified hardware writes on other devices.
 
-Powered by Vincent · mythvietnamese@gmail.com
+The installer has no commercial code-signing certificate. Widget setup uses its included self-signed public certificate and local loopback access. See the release notes for details.
+
+## Join the community
+
+**[Join MasterPanel on Discord](https://discord.gg/n2fD2jvjvz)** to ask a question, compare game settings or help investigate a bug.
+
+- **#game-profiles:** share your device, game, app version, power source and settings you actually tried.
+- **#help:** questions about setup and everyday use.
+- **#bug-reports:** what you expected, what happened and how to reproduce it.
+
+**Settings → Report a problem** creates a local diagnostic ZIP with no automatic upload. Review it and send it by email when requested. Keep credentials and personal information out of public reports.
+
+A GitHub star helps other players find the project. [Follow or support development on Patreon](https://www.patreon.com/c/masterpanel). The Windows download and Discord remain open to everyone.
+
+## Guides
+
+[Quick start](QUICK-START.txt) · [Release notes](RELEASE-NOTES.md) · [Stability](STABILITY.md) · [Tools overview](TOOLS-OVERVIEW.md) · [4.0.0 validation](VALIDATION-4.0.0.txt)
+
+Older reports are in [docs/history](docs/history/). Maintainer notes are in [docs/maintenance](docs/maintenance/). They describe their named versions, not current feature promises. Game, temperature, power source and firmware affect results; no preset guarantees an FPS increase.
+
+## Licenses and notices
+
+See [LICENSE](LICENSE) and [third-party notices](NOTICE.md). This public repository contains release documentation and promotional images. The application build workspace is separate.
+
+**Powered by Vincent** · [mythvietnamese@gmail.com](mailto:mythvietnamese@gmail.com)

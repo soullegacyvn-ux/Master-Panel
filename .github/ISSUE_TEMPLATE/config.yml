@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Questions and game profiles
+    url: https://discord.gg/n2fD2jvjvz
+    about: Get setup help or share tested game settings in the MasterPanel Discord.
+  - name: Download the latest Windows release
+    url: https://github.com/soullegacyvn-ux/Master-Panel/releases/latest
+    about: Start with the latest stable installer and its release notes.

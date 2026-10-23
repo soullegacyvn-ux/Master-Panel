@@ -1,0 +1,17 @@
+name: Suggest an improvement
+description: Describe something that would make MasterPanel easier or more useful.
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: What are you trying to do?
+      description: Tell us about the problem or task first.
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would help?
+      description: Describe your idea and how you would use it.
+    validations:
+      required: true

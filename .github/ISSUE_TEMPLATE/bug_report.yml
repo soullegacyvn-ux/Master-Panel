@@ -1,0 +1,39 @@
+name: Report a problem
+description: Tell us what happened and how to reproduce it.
+body:
+  - type: markdown
+    attributes:
+      value: "For setup questions, use Discord. Do not post passwords, tokens or diagnostic archives publicly. Report a problem in the app creates a local ZIP; send a reviewed archive by email only when requested."
+  - type: input
+    id: version
+    attributes:
+      label: MasterPanel version
+      placeholder: e.g. 4.0.0
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: Device, Windows version and power source
+      placeholder: GPD Win 5, Windows 11 build, battery or plugged in
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: What did you expect, and what happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: How can we reproduce it?
+      description: Include the game, settings and steps, if relevant.
+    validations:
+      required: true
+  - type: textarea
+    id: extra
+    attributes:
+      label: Screenshots or extra context
+      description: Review screenshots for personal information before attaching them.
