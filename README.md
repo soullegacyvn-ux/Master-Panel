@@ -4,7 +4,7 @@
 
 A console-like home for **Windows handhelds**. Fullscreen game library, quick Panel controls and an Xbox Game Bar Widget, built around playing with a controller.
 
-**[Download for Windows](https://github.com/soullegacyvn-ux/Master-Panel/releases/latest)** · **[Join Discord](https://discord.gg/n2fD2jvjvz)** · [Website](https://master-panel.net/) · [Patreon](https://www.patreon.com/c/masterpanel)
+**[Download for Windows](https://github.com/soullegacyvn-ux/Master-Panel/releases/latest)** · **[Join Discord](https://discord.gg/n2fD2jvjvz)**
 
 ## One app, three ways in
 
@@ -50,7 +50,7 @@ The installer has no commercial code-signing certificate. Widget setup uses its 
 
 **Settings → Report a problem** creates a local diagnostic ZIP with no automatic upload. Review it and send it by email when requested. Keep credentials and personal information out of public reports.
 
-A GitHub star helps other players find the project. [Follow or support development on Patreon](https://www.patreon.com/c/masterpanel). The Windows download and Discord remain open to everyone.
+A GitHub star helps other players find the project. Join Discord for game profiles, development news and support. The Windows download and Discord remain open to everyone.
 
 ## Guides
 
