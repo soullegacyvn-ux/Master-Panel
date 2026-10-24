@@ -28,7 +28,7 @@ External LSFG display FPS uses actual measurements when available, never an FPS 
 
 The required Windows workflow exercises Go tests/vet, native SDK oracles, bridge/controller/UI regression cases, original-user elevated launch, Program Files install/uninstall and complete package updates retaining user settings. Portable race tests supplement native Windows checks.
 
-Generic hosted Windows checks cannot validate GPD EC/SMU behavior, permanent vibration/remap persistence, real game rendering, actual hardware power consumption or the user's Winhanced startup. CPU/RAM/FPS overhead must be measured on a real Win 5. See the accepted build logs and VALIDATION-4.0.0.txt for scope.
+Generic hosted Windows checks cannot validate GPD EC/SMU behavior, permanent vibration/remap persistence, real game rendering, actual hardware power consumption or the user's Winhanced startup. CPU/RAM/FPS overhead must be measured on a real Win 5. See the accepted build logs and [4.0.0 validation](validation/VALIDATION-4.0.0.txt) for scope.
 
 ## Support
 

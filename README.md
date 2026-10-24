@@ -1,65 +1,58 @@
-![MasterPanel: PC freedom. Console comfort.](media/masterpanel-cover.png)
+![MasterPanel overview](media/masterpanel-overview.png)
 
 # MasterPanel
 
-A console-like home for **Windows handhelds**. Fullscreen game library, quick Panel controls and an Xbox Game Bar Widget, built around playing with a controller.
+Your game library and handheld controls, together on Windows.
 
-**[Download for Windows](https://github.com/soullegacyvn-ux/Master-Panel/releases/latest)** · **[Join Discord](https://discord.gg/n2fD2jvjvz)**
+**[Download stable 4.0.0](https://github.com/soullegacyvn-ux/Master-Panel/releases/latest)** · **[Join Discord](https://discord.gg/n2fD2jvjvz)** · **[Quick start](docs/quick-start.txt)**
 
-## One app, three ways in
+**MasterPanel x1.0 is in development preview.** The images below show the upcoming experience. The current public download remains 4.0.0 with Panel and Game Bar Widget; a new installer will be published after testing.
 
-- **Fullscreen Home:** browse your game library, open game details and keep per-game preferences close at hand.
-- **Panel:** reach supported power, cooling, display and controller controls beside your game.
-- **Xbox Game Bar Widget:** open your shared controls through Win+G.
+## Why MasterPanel
 
-One shared control engine connects the interfaces and saved settings. The aim is a light, fast experience that feels at home on a handheld.
+The **x1.0 development preview** brings the gaming experience together:
 
-![MasterPanel fullscreen Home development preview](media/fullscreen-home.png)
+- **Performance-focused FSE.** Tune TDP, cooling and per-game profiles to optimize gameplay. FPS gains vary by game, device and settings.
+- **Compact controls.** Panel and Widget share one control engine and saved settings, with the controls you need close at hand.
+- **Device-aware support.** The preview includes GPD Win 5 and ONEXPLAYER X2 Mini Pro profiles. Available controls and hardware validation vary by device and firmware.
+- **Easy to navigate.** Browse games and adjust settings through interfaces designed for controller, touch and desktop use.
+- **Community inside FSE.** Meet MasterPanel players, manage friends and send invitations to play together from the launcher. Steam and Discord integrations are also in preview.
+- **More to come.** Planned improvements cover the library, supported hardware and Community. Development priorities will follow testing and player feedback.
 
-*Product preview with sample data. The current stable download includes Panel and Widget; fullscreen Home is in development. Features and hardware tuning vary by release and supported device profile. Check the latest release notes before installing.*
+## One app, three interfaces
 
-## Controls, close at hand
+| Interface | Purpose |
+| --- | --- |
+| **Launcher** | Browse your game library in a controller-friendly fullscreen home. |
+| **Panel** | Reach supported power, cooling, display, audio and controller settings. |
+| **Game Bar Widget** | Open shared controls while playing with **Win+G**. |
 
-Adjust supported TDP limits, customize six presets and compare the limit with actual CPU power draw. Pick fan profiles or a custom curve, tune display settings, map supported buttons and save profiles.
+Panel and Widget use the same control engine and saved settings. Hardware features depend on the device and firmware.
 
-Optional RTSS, compatible FxSound and Windows Lossless Scaling controls bring your existing tools into the same place. Lossless Scaling is purchased separately on Steam.
+![MasterPanel fullscreen launcher development preview](media/masterpanel-fse.png)
 
-<details><summary>See Panel and cooling previews</summary>
+![MasterPanel control panel development preview](media/masterpanel-panel.png)
 
-<table><tr><td width="50%"><img src="media/panel-master.png" alt="MasterPanel controls preview with sample readings" width="100%"></td><td width="50%"><img src="media/panel-fan.png" alt="Fan curve preview with sample readings" width="100%"></td></tr><tr><td align="center">Panel</td><td align="center">Cooling</td></tr></table>
+## Install
 
-</details>
+1. Download the **Setup EXE** from the [stable release](https://github.com/soullegacyvn-ux/Master-Panel/releases/latest).
+2. Exit the older Panel from its tray menu, then run Setup. A normal upgrade keeps your preferences.
+3. Open Panel from its shortcut, or use **Win+G → Widgets → Master Panel**.
 
-## Get started
+Windows 11 x64 is the intended platform. Stable 4.0.0 hardware controls target **GPD Win 5**. WebView2, Xbox Game Bar and PawnIO support the relevant components; see the [quick start](docs/quick-start.txt).
 
-1. Choose the Windows **Setup EXE** under Assets in the [latest stable release](https://github.com/soullegacyvn-ux/Master-Panel/releases/latest).
-2. Exit an older Panel from its tray menu before running Setup. A normal upgrade keeps user settings and installs the matching interfaces included in that release.
-3. Use the installed shortcuts. On supported devices, the physical swap button opens Panel. For the Widget: **Win+G → Widgets → Master Panel**.
+The upcoming Windows gaming-home integration is a developer preview. Microsoft production authorization is pending.
 
-Windows 11 x64 is the intended platform. **WebView2** displays the interface; **PawnIO** enables supported hardware controls, which require elevated access. **Settings → Components** links to official installers. The stable 4.0.0 hardware controls target GPD Win 5; a broader product direction does not enable unverified hardware writes on other devices.
+## Community and support
 
-The installer has no commercial code-signing certificate. Widget setup uses its included self-signed public certificate and local loopback access. See the release notes for details.
+[Join MasterPanel on Discord](https://discord.gg/n2fD2jvjvz) for help, game profiles and development updates. For a bug report, include the app version, device, power source and steps to reproduce it.
 
-## Join the community
+**Settings → Report a problem** creates a local diagnostic ZIP. Review it before sharing; reports are not uploaded automatically.
 
-**[Join MasterPanel on Discord](https://discord.gg/n2fD2jvjvz)** to ask a question, compare game settings or help investigate a bug.
+[Guides](docs/README.md) · [4.0.0 release notes](docs/releases/4.0.0.md) · [Validation](docs/validation/VALIDATION-4.0.0.txt)
 
-- **#game-profiles:** share your device, game, app version, power source and settings you actually tried.
-- **#help:** questions about setup and everyday use.
-- **#bug-reports:** what you expected, what happened and how to reproduce it.
+## License
 
-**Settings → Report a problem** creates a local diagnostic ZIP with no automatic upload. Review it and send it by email when requested. Keep credentials and personal information out of public reports.
+See [LICENSE](LICENSE) and [third-party notices](NOTICE.md). This public repository contains release documentation and product images; the application build workspace is separate.
 
-A GitHub star helps other players find the project. Join Discord for game profiles, development news and support. The Windows download and Discord remain open to everyone.
-
-## Guides
-
-[Quick start](QUICK-START.txt) · [Release notes](RELEASE-NOTES.md) · [Stability](STABILITY.md) · [Tools overview](TOOLS-OVERVIEW.md) · [4.0.0 validation](VALIDATION-4.0.0.txt)
-
-Older reports are in [docs/history](docs/history/). Maintainer notes are in [docs/maintenance](docs/maintenance/). They describe their named versions, not current feature promises. Game, temperature, power source and firmware affect results; no preset guarantees an FPS increase.
-
-## Licenses and notices
-
-See [LICENSE](LICENSE) and [third-party notices](NOTICE.md). This public repository contains release documentation and promotional images. The application build workspace is separate.
-
-**Powered by Vincent** · [mythvietnamese@gmail.com](mailto:mythvietnamese@gmail.com)
+**Powered by Vincent** · [Contact](mailto:mythvietnamese@gmail.com)

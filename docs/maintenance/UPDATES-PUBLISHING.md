@@ -1,4 +1,6 @@
-# Publishing Master Panel updates
+# Publishing MasterPanel updates
+
+A release display name may differ from its technical version. **MasterPanel x1.0** is the upcoming product label; it does not authorize lowering executable, installer, widget or updater versions. Keep existing 4.0.0 release assets and update compatibility intact until a new verified build is ready.
 
 From 3.0.2 the updater prefers the complete installer so the desktop app and Xbox Game Bar widget stay on the same version.
 

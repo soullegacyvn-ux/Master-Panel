@@ -1,4 +1,6 @@
-# Tools Overview — 3.3.4
+# Tools overview
+
+Implementation notes from 3.3.4, retained for the 4.0.0 public documentation. For installation and everyday use, start with the [quick start](quick-start.txt).
 
 The accepted compact Overview is part of the shared offline page. Both the
 desktop and Xbox Game Bar call the same four native bindings: `refreshTools`,
