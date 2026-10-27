@@ -1,8 +1,9 @@
 # Documentation
 
-The current public Windows release is **4.0.0**. **MasterPanel x1.0** is the upcoming development preview; these guides do not describe an unreleased installer.
+The current public Windows product release is **MasterPanel 1.0.0.2**, using the owner-provided R12 installer (internal build 4.1.2-rc.10). Older guides and validation documents retain their named version scope.
 
-- [Quick start](quick-start.txt)
+- [1.0.0.2 download and installation](releases/1.0.0.2.md)
+- [Historical 4.0.0 quick start](quick-start.txt)
 - [4.0.0 release notes](releases/4.0.0.md)
 - [4.0.0 stability](stability.md)
 - [Tools overview](tools-overview.md)

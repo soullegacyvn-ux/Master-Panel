@@ -1,14 +1,14 @@
-# Third-party notices
+# Ownership and third-party notices
 
-MasterPanel is distributed under **GPL-3.0-or-later**; see [LICENSE](LICENSE).
+MasterPanel is proprietary software, Copyright 2026 Vincent. See [LICENSE](LICENSE). This public repository contains distribution documentation and product images; the application source and build workspace are private.
 
-The complete retained component attributions, upstream references and version-specific notices are in [Third-party notices](docs/legal/THIRD-PARTY-NOTICES.md). Historical entries describe their named releases and do not establish current feature availability.
+Third-party components retain their own licenses. Their notices and the corresponding source for redistributed PawnIO.Modules components are provided through **Settings → Third-party licenses** in the application.
 
-Third-party license texts:
+Retained license texts:
 
 - [AMD Display Library SDK](licenses/LICENSE-AMD-ADL.txt)
 - [Microsoft Fluent System Icons](licenses/LICENSE-Fluent-System-Icons.txt)
 - [Night light reference](licenses/LICENSE-NightLight.txt)
 - [Microsoft WebView2 SDK](licenses/LICENSE-WebView2SDK.txt)
 
-The application also provides its bundled component notices and redistributed module source through **Settings → Third-party licenses**.
+See [component notices](docs/legal/THIRD-PARTY-NOTICES.md). Earlier releases retain the rights and notices under which they were distributed; this update does not revoke them.
