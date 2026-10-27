@@ -4,7 +4,7 @@
 
 Your game library and handheld controls, together on Windows.
 
-**[Download MasterPanel 1.0.0.2](https://github.com/soullegacyvn-ux/Master-Panel/releases/latest)** · **[Join Discord](https://discord.gg/n2fD2jvjvz)** · **[Quick start](docs/quick-start.txt)**
+**[Download MasterPanel 1.0.0.2](https://github.com/soullegacyvn-ux/Master-Panel/releases/latest)** · **[Join Discord](https://discord.gg/n2fD2jvjvz)** · **[Install guide](docs/releases/1.0.0.2.md)** · **[FAQ / FSE troubleshooting](docs/fse-troubleshooting.md)**
 
 **MasterPanel 1.0.0.2 is available.** Download the Windows Setup package from Releases. The optional Windows gaming-home integration remains a developer preview.
 
@@ -42,6 +42,8 @@ Panel and Widget use the same control engine and saved settings. Hardware featur
 Windows 11 x64 is the intended platform. Hardware controls are device-specific; support and validation vary by model. WebView2, Xbox Game Bar and PawnIO support the relevant components; see the [quick start](docs/quick-start.txt).
 
 The optional Windows gaming-home integration is a developer preview. Microsoft production authorization is pending.
+
+**Missing Xbox mode or “Choose home app”?** Start with our [FSE setup and troubleshooting guide](docs/fse-troubleshooting.md), including an optional third-party tool for devices where Windows does not expose these settings.
 
 ## Community and support
 
